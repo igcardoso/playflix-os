@@ -198,7 +198,7 @@ function updateProminence(movies, carousel) {
       overview,
       release_date,
       vote_average,
-      // popularity,
+      popularity,
       backdrop_path,
       vote_count
     } = movie;
@@ -208,27 +208,7 @@ function updateProminence(movies, carousel) {
     const image = $('<img>').attr('src', IMG_URL_PROMINENCE + backdrop_path).attr('alt', title);
     const caption = $('<h3>').text(title);
     const description = $('<p class="description">').text(overview.substring(0, 230) + "...");
-
-    async function exibirPlataformaStreaming(filmeId) {
-      const detalhesUrl = `${BASE_URL}/movie/${filmeId}?${API_KEY}`;
-
-      try {
-        const response = await fetch(detalhesUrl);
-        const data = await response.json();
-
-        const plataformas = data.production_companies.map(company => company.name);
-
-        var contentPopularity = $('<button class="popularity">').text(plataformas[0]);
-
-        info.append(contentPopularity);
-
-
-      } catch (error) {
-        console.error('Ocorreu um erro:', error);
-      }
-    }
-
-    exibirPlataformaStreaming(id);
+    var contentPopularity = $('<button class="popularity">').text(popularity + "%");
 
     const voteCont = $('<i class="bx bxs-star voteCont">').text(" " + vote_count);
     const date = $('<span class="date">').text(release_date);
@@ -246,6 +226,7 @@ function updateProminence(movies, carousel) {
     info.append(voteCont);
     info.append(description);
     info.append(idButton);
+    info.append(contentPopularity);
     carousel.append(item);
   });
 
