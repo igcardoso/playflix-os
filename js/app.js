@@ -1,6 +1,3 @@
-window.addEventListener('resize', function(event){
-  window.location.reload();
-}); 
 
 var cont_1 = 0
 document.querySelector("#next_1").addEventListener("click", ()=> {
