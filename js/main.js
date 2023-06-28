@@ -220,21 +220,6 @@ function updateProminence(movies, carousel) {
 
         const contentPopularity = $('<button class="popularity">').text(plataformas[0]); 
 
-        switch (plataformas[0]) {
-          case "Disney+":
-            document.querySelector('.plataforms svg').classList.add('disney');
-            break;
-          case "Netflix":
-            document.querySelector('.plataforms svg').classList.add('netflix');
-            break;
-          case "HBO":
-            document.querySelector('.plataforms svg').classList.add('hbo');
-            break;
-          case "Fox":
-            document.querySelector('.plataforms svg').classList.add('fox');
-            break;
-        }
-        // Check the streaming platforms and display the corresponding message
 
       } catch (error) {
         console.error('Ocorreu um erro:', error);
