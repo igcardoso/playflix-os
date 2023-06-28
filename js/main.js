@@ -198,7 +198,7 @@ function updateProminence(movies, carousel) {
       overview,
       release_date,
       vote_average,
-      popularity,
+      // popularity,
       backdrop_path,
       vote_count
     } = movie;
