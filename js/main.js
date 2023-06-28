@@ -156,23 +156,23 @@ function updateCarousel(movies, carousel) {
     nav: true,
     navText: ['<i class="bx bx-chevron-left"></i>',
       '<i class="bx bx-chevron-right"></i>'],
-      responsive: {
-        0: {
-          items: 2
-        },
-        480: {
-          items: 3
-        },
-        600: {
-          items: 4
-        },
-        780: {
-          items: 3
-        },
-        1000: {
-          items: 4
-        }
+    responsive: {
+      0: {
+        items: 2
+      },
+      480: {
+        items: 3
+      },
+      600: {
+        items: 4
+      },
+      780: {
+        items: 3
+      },
+      1000: {
+        items: 4
       }
+    }
   });
 }
 
@@ -208,14 +208,48 @@ function updateProminence(movies, carousel) {
     const image = $('<img>').attr('src', IMG_URL_PROMINENCE + backdrop_path).attr('alt', title);
     const caption = $('<h3>').text(title);
     const description = $('<p class="description">').text(overview.substring(0, 230) + "...");
-    const contentPopularity = $('<button class="popularity">').text(popularity + "%");
+
+    async function exibirPlataformaStreaming(filmeId) {
+      const detalhesUrl = `${BASE_URL}/movie/${filmeId}?${API_KEY}`;
+
+      try {
+        const response = await fetch(detalhesUrl);
+        const data = await response.json();
+
+        const plataformas = data.production_companies.map(company => company.name);
+
+        const contentPopularity = $('<button class="popularity">').text(plataformas[0]); 
+
+        switch (plataformas[0]) {
+          case "Disney+":
+            document.querySelector('.plataforms svg').classList.add('disney');
+            break;
+          case "Netflix":
+            document.querySelector('.plataforms svg').classList.add('netflix');
+            break;
+          case "HBO":
+            document.querySelector('.plataforms svg').classList.add('hbo');
+            break;
+          case "Fox":
+            document.querySelector('.plataforms svg').classList.add('fox');
+            break;
+        }
+        // Check the streaming platforms and display the corresponding message
+
+      } catch (error) {
+        console.error('Ocorreu um erro:', error);
+      }
+    }
+
+    exibirPlataformaStreaming(id);
+
     const voteCont = $('<i class="bx bxs-star voteCont">').text(" " + vote_count);
     const date = $('<span class="date">').text(release_date);
     const idButton = $('<button class="play">').text('Assistir').on('click', function() {
       var DateId = id;
       var url = "html/film_session.html";
       url += "?DateId=" + encodeURIComponent(DateId);
-        window.location.href = url;
+      window.location.href = url;
     });
 
     item.append(info);
