@@ -1,0 +1,275 @@
+  @charset"utf-8";
+  
+  * {
+    margin: 0;
+    padding: 0;
+    font-family: 'Varela Round', sans-serif;
+  }
+  
+  body {
+    background: #000000;
+  }
+  
+  header {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+  }
+  
+  header::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top,rgb(0,0,0), rgba(0,0,0,0));
+    z-index: -1;
+  }
+  
+  header img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+  }
+  
+  .description {
+    margin: 20px 30px 0 30px;
+    text-align: left;
+    color: #ffffff;
+    font-size: 14px;
+    opacity: .6;
+  }
+  
+  .title {
+    margin: 20px 30px 20px 30px;
+    text-align: left;
+    color: #ffffff;
+    font-size: 1.6rem;
+  }
+  
+  .vote {
+    margin: 20px 10px 0 30px;
+    text-align: left;
+    color: #08ff00;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 5px;
+    border-radius: 5px;
+  }
+  
+  .plataforms {
+    padding: 5px;
+    border-radius: 5px;
+    color: #ffffff;
+    font-weight: 700;
+  }
+  
+  .plataforms svg {
+    fill: red;
+    width: 30px;
+    height: auto;
+    margin-bottom: -10px;
+  }
+  
+  svg.disney {
+    fill: #0098ff;
+  }
+  svg.netflix {
+    fill: red;
+  }
+  svg.hbo {
+    fill: #5800ff;
+  }
+  svg.fox {
+    fill: #ffffff;
+  }
+  
+  i {
+    color: #fbd500;
+  }
+  
+  .genere {
+    margin: 20px 30px 0 30px;
+    text-align: left;
+    color: #ffffff;
+    font-size: 14px;
+    padding: 5px 5px 5px 20px;
+    border-left: 2px solid red;
+  }
+  
+  .contentButtons {
+    justify-content: center;
+    justify-items: center;
+    padding: 10px 10px 10px 30px;
+    width: calc(100% - 60px);
+    text-align: center;
+    display: flex;
+    background: #000000;
+  }
+  
+  .contentButtons button {
+    margin-right: 30px;
+  }
+  
+  .play {
+    border-radius: 1.2em;
+    padding: 15px 25px 18px 25px;
+    background: red;
+    color: #ffffff;
+    border: none;
+    font-size: 14px;
+    font-weight: 700;
+    width: 100%;
+  }
+  
+  .play svg {
+    margin-bottom: -10px;
+    margin-right: 20px;
+  }
+  
+  .donwload {
+    border-radius: 8em;
+    padding: 10px 13px 10px 13px;
+    background: transparent;
+    webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px);
+    color: #ffffff;
+    border: none;
+  }
+  
+  .actors {
+    width: calc(100% - 40px);
+    display: flex;
+    transition-property: transform;
+    box-sizing: content-box;
+    overflow: hidden;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    padding: 20px;
+  }
+  
+  .actors .actor {
+    width: 120px;
+    height: 120px;
+    flex-shrink: 0;
+    overflow: hidden;
+    position: relative;
+    margin: 20px 10px 20px 10px;
+    border-radius: 1.2em;
+  }
+  
+  .actors .actor::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.089);
+    z-index: 2;
+  }
+  
+  .actors .actor img {
+    width: 100%;
+    height: auto;
+    z-index: -1;
+  }
+  
+  .actors .actor p {
+    position: absolute;
+    bottom: 10px;
+    left: 5px;
+    font-weight: 700;
+    z-index: 1;
+    color: #ffffff;
+  }
+  
+  .Containment_season_options {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+  }
+  
+  .SelectSeasons {
+    padding: 20px;
+    display: flex;
+    z-index: 1;
+    transition-property: transform;
+    box-sizing: content-box;
+    overflow: hidden;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+  }
+  
+  .SelectSeasons .option {
+    min-width: 100px;
+    padding: 20px;
+    border-radius: 1.2em;
+    background: #3838387c;
+    color: #ffffff;
+    margin: auto;
+    margin-left: 5px;
+    margin-right: 5px;
+    font-size: .8rem;
+  }
+  
+  .SelectSeasons .option.active {
+    transform: scale(1.2);
+    background: red;
+    border-radius: 1.2em;
+    font-weight: 700;
+  }
+  
+  .seasons {
+    padding: 30px;
+    width: calc(100% - 60px);
+    display: flex;
+    z-index: 1;
+    transition-property: transform;
+    box-sizing: content-box;
+    overflow: hidden;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+  }
+  
+  .seasons ul {
+    display: none;
+  }
+  
+  .seasons ul.active {
+    display: flex;
+  }
+  
+  .seasons ul li {
+    flex-shrink: 0;
+    width: 250px;
+    height: 150px;
+    position: relative;
+    transition: 1s ease;
+    list-style-type: none;
+    overflow: hidden;
+    border-radius: 1.2em;
+    margin-right: 10px;
+  }
+  
+  .seasons ul li .capa {
+    flex-shrink: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+  
+  .seasons ul li .title_namber {
+    color: #ffffff;
+    font-weight: 700;
+    padding-left: 20px;
+    border-left: 2px solid red;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+  }
+  
