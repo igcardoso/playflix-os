@@ -313,7 +313,7 @@ watchMovies.addEventListener('click', ()=> {
 });
 
 const bxSearch = document.querySelector('.bx.bx-search');
-const bxSearch2 = document.querySelector('.bx.bx-search');
+const bxSearch2 = document.querySelector('.op-search');
 var pageSearch = document.querySelector('.pageSearch');
 
 bxSearch.addEventListener('click', ()=> {
