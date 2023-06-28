@@ -288,8 +288,13 @@ watchSeries.addEventListener('click', ()=> {
 });
 
 const bxSearch = document.querySelector('.bx.bx-search');
+const bxSearch2 = document.querySelector('.op-search');
 var pageSearch = document.querySelector('.pageSearch');
 
 bxSearch.addEventListener('click', ()=> {
+  pageSearch.classList.toggle('visible');
+});
+
+bxSearch2.addEventListener('click', ()=> {
   pageSearch.classList.toggle('visible');
 });
