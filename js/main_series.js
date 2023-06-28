@@ -231,7 +231,27 @@ function updateProminence(movies, carousel) {
     const image = $('<img>').attr('src', IMG_URL_PROMINENCE + backdrop_path).attr('alt', name);
     const caption = $('<h3>').text(name);
     const description = $('<p class="description">').text(overview.substring(0, 230) + "...");
-    const contentPopularity = $('<button class="popularity">').text(popularity + "%");
+
+    async function exibirPlataformaStreaming(filmeId) {
+      const detalhesUrl = `${BASE_URL}/movie/${filmeId}?${API_KEY}`;
+
+      try {
+        const response = await fetch(detalhesUrl);
+        const data = await response.json();
+
+        const plataformas = data.production_companies.map(company => company.name);
+
+        var contentPopularity = $('<button class="popularity">').text(plataformas[0]);
+
+        info.append(contentPopularity);
+
+      } catch (error) {
+        console.error('Ocorreu um erro:', error);
+      }
+    }
+
+    exibirPlataformaStreaming(id);
+
     const voteCont = $('<i class="bx bxs-star voteCont">').text(" " + vote_count);
     const date = $('<span class="date">').text(release_date);
     const idButton = $('<button class="play">').text('Assistir').on('click', function() {
@@ -247,7 +267,6 @@ function updateProminence(movies, carousel) {
     info.append(date);
     info.append(voteCont);
     info.append(description);
-    info.append(contentPopularity);
     info.append(idButton);
     carousel.append(item);
   });
