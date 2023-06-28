@@ -218,7 +218,7 @@ function updateProminence(movies, carousel) {
 
         const plataformas = data.production_companies.map(company => company.name);
 
-        const contentPopularity = $('<button class="popularity">').text(plataformas[0]); 
+        var contentPopularity = $('<button class="popularity">').text(plataformas[0]); 
 
 
       } catch (error) {
