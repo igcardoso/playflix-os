@@ -239,7 +239,7 @@ function updateProminence(movies, carousel) {
         const response = await fetch(detalhesUrl);
         const data = await response.json();
 
-        const plataformas = datadata.networks.map(network => network.name);
+        const plataformas = data.networks.map(network => network.name);
 
         var contentPopularity = $('<button class="popularity">').text(plataformas[0]);
 
