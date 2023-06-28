@@ -232,8 +232,8 @@ function updateProminence(movies, carousel) {
     const caption = $('<h3>').text(name);
     const description = $('<p class="description">').text(overview.substring(0, 230) + "...");
 
-    async function exibirPlataformaStreaming(filmeId) {
-      const detalhesUrl = `${BASE_URL}/movie/${filmeId}?${API_KEY}`;
+    async function exibirPlataformaStreaming(serieId) {
+      const detalhesUrl = `${BASE_URL}/tv/${serieId}?${API_KEY}`;
 
       try {
         const response = await fetch(detalhesUrl);
