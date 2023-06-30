@@ -16,12 +16,11 @@ body {
 }
 
 .bx-chevron-right, .bx-chevron-left {
-  padding: 5px;
+  padding: 10px;
   border-radius: 8em;
   font-size: 23px;
   font-weight: 600;
   background: red;
-  width: 100%;
 }
 
 .bx-chevron-right:hover, .bx-chevron-left:hover {
