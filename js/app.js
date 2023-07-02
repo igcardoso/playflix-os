@@ -1,4 +1,3 @@
-
 var cont_1 = 0
 document.querySelector("#next_1").addEventListener("click", ()=> {
   cont_1++
@@ -116,3 +115,82 @@ buttonPage_5.addEventListener('click', ()=> {
   window.location.href = "cofee.html"
 });
 
+// Obter todos os elementos navegáveis
+const navigableElements = document.querySelectorAll('.navigable');
+
+// Adicionar eventos de foco aos elementos navegáveis
+for (let i = 0; i < navigableElements.length; i++) {
+  navigableElements[i].addEventListener('focus', handleElementFocus);
+}
+
+// Função para lidar com o foco nos elementos navegáveis
+function handleElementFocus(event) {
+  const focusedElement = event.target;
+
+  // Role a página para que o elemento focado seja exibido na tela
+  focusedElement.scrollIntoView({
+    behavior: 'smooth', block: 'center'
+  });
+}
+
+// Adicionar eventos de teclado para navegação
+document.addEventListener('keydown', handleKeyDown);
+
+// Função para lidar com eventos de teclado
+function handleKeyDown(event) {
+  const keyCode = event.keyCode;
+
+  // Verificar as teclas de direção para navegação
+  if (keyCode === 37 || keyCode === 38 || keyCode === 39 || keyCode === 40) {
+    event.preventDefault();
+
+    // Obter o elemento atualmente focado
+    const focusedElement = document.activeElement;
+
+    // Obter todos os elementos navegáveis novamente
+    const allNavigableElements = document.querySelectorAll('.navigable');
+
+    // Obter o índice do elemento atualmente focado
+    const currentIndex = Array.from(allNavigableElements).indexOf(focusedElement);
+
+    // Calcular o índice do próximo elemento com base na tecla de direção pressionada
+    let nextIndex;
+    if (keyCode === 37 || keyCode === 38) {
+      nextIndex = currentIndex - 1 >= 0 ? currentIndex - 1: allNavigableElements.length - 1;
+    } else if (keyCode === 39 || keyCode === 40) {
+      nextIndex = currentIndex + 1 < allNavigableElements.length ? currentIndex + 1: 0;
+    }
+
+    // Obter o próximo elemento a ser focado
+    const nextElement = allNavigableElements[nextIndex];
+
+    // Focar no próximo elemento
+    nextElement.focus();
+  }
+}
+
+
+
+
+
+
+
+
+
+/*
+document.querySelector('.view_content').addEventListener('scroll', function () {
+  var rows = document.getElementsByClassName('owl-carousel');
+
+  for (var i = 0; i < rows.length; i++) {
+    var row = rows[i];
+    var rect = row.getBoundingClientRect();
+
+    if (rect.top >= 0 && rect.bottom <= window.innerHeight) {
+      row.classList.remove('hidden');
+      row.classList.add('visible');
+    } else {
+      row.classList.remove('visible');
+      row.classList.add('hidden');
+    }
+  }
+});*/
