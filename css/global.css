@@ -3,5 +3,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
 
 * {
-    font-family: 'Varela Round', sans-serif;
+  font-family: 'Varela Round', sans-serif;
+}
+
+svg.checked {
+  fill: red;
+  width: 30px;
+  height: auto;
+  margin-bottom: -10px;
+}
+
+.navigable {
+  outline: none;
 }
