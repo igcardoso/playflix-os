@@ -113,8 +113,8 @@ function updateCarousel(movies, carousel) {
     const {
       title,
       poster_path,
-      backdrop_path,
       id,
+      backdrop_path,
       vote_count
     } = movie;
 
@@ -131,16 +131,34 @@ function updateCarousel(movies, carousel) {
 
     // ...
 
-    const giving_play = $('<div class="giving_play">').text('').on('click', function() {
+    const giving_play = $('<button class="navigable giving_play">').text('').on('click', function() {
       var DateId = id;
       var url = "html/film_session.html";
       url += "?DateId=" + encodeURIComponent(DateId);
       window.location.href = url;
-
     });
 
-    // ...
+    function exibirInformacoesFilme(idFilme) {
+      const url = `${BASE_URL}/movie/${idFilme}?${API_KEY}&language=pt-BR`;
+      fetch(url)
+      .then(response => response.json())
+      .then(filme => {
 
+
+        document.querySelector('.image_destaque2').src = IMG_URL + filme.backdrop_path;
+        document.querySelector('.caption_destaque2').innerText = filme.title
+        document.querySelector('.popularity_destaque2').innerText = filme.vote_average + "%"
+        document.querySelector('.date_destaque2').innerText = filme.release_date
+        document.querySelector('.voteCont_destaque2').innerText = filme.vote_count
+        document.querySelector('.description_destaque2').innerText = filme.overview.substring(0, 200) + "..."
+
+      })
+      .catch(error => console.error('Erro ao obter informações do filme:', error));
+    }
+    exibirInformacoesFilme(id);
+    giving_play.on('focus', function() {
+      exibirInformacoesFilme(id)
+    });
 
     item.append(image);
     item.append(voteCont);
@@ -154,8 +172,12 @@ function updateCarousel(movies, carousel) {
     loop: true,
     margin: 10,
     nav: true,
-    navText: ['<i class="bx bx-chevron-left"></i>',
-      '<i class="bx bx-chevron-right"></i>'],
+    navText: [`<svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <g id="Arrow / Chevron_Left">
+      <path id="Vector" d="M15 19L8 12L15 5" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />`,
+      `<svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <g id="Arrow / Chevron_Right">
+      <path id="Vector" d="M9 5L16 12L9 19" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />`],
     responsive: {
       0: {
         items: 2
@@ -207,8 +229,8 @@ function updateProminence(movies, carousel) {
     const info = $('<div>').addClass('info');
     const image = $('<img>').attr('src', IMG_URL_PROMINENCE + backdrop_path).attr('alt', title);
     const caption = $('<h3>').text(title);
-    const description = $('<p class="description">').text(overview.substring(0, 230) + "...");
-    var contentPopularity = $('<button class="popularity">').text(popularity + "%");
+    const description = $('<p class="description">').text(overview.substring(0, 200) + "...");
+    var contentPopularity = $('<button class="popularity">').text(vote_average + "%");
 
     const voteCont = $('<i class="bx bxs-star voteCont">').text(" " + vote_count);
     const date = $('<span class="date">').text(release_date);
@@ -219,6 +241,10 @@ function updateProminence(movies, carousel) {
       window.location.href = url;
     });
 
+    if (! (overview == "" || vote_count == "")) {
+      carousel.append(item);
+    }
+
     item.append(info);
     item.append(image);
     info.append(caption);
@@ -227,7 +253,6 @@ function updateProminence(movies, carousel) {
     info.append(description);
     info.append(idButton);
     info.append(contentPopularity);
-    carousel.append(item);
   });
 
 
@@ -244,6 +269,14 @@ function showHighlights() {
     $('.owl-carousel:eq(2)'));
   getMoviesForCarousel(API_URL + '&page=4',
     $('.owl-carousel:eq(3)'));
+  getMoviesForCarousel(API_URL + '&page=5',
+    $('.owl-carousel:eq(4)'));
+  getMoviesForCarousel(API_URL + '&page=6',
+    $('.owl-carousel:eq(5)'));
+  getMoviesForCarousel(API_URL + '&page=7',
+    $('.owl-carousel:eq(6)'));
+  getMoviesForCarousel(API_URL + '&page=8',
+    $('.owl-carousel:eq(7)'));
 }
 
 // Função para pesquisar filmes
