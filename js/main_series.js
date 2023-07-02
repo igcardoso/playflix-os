@@ -158,7 +158,7 @@ function updateCarousel(movies, carousel) {
       .then(showData => {
 
 
-        document.querySelector('.image_destaque2').src = IMG_URL + showData.backdrop_path;
+        document.querySelector('.image_destaque2').src = 'https://image.tmdb.org/t/p/original' + showData.backdrop_path;
         document.querySelector('.caption_destaque2').innerText = showData.name
         document.querySelector('.popularity_destaque2').innerText = showData.vote_average + "%"
 
