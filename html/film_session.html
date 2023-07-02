@@ -32,162 +32,302 @@
   <title>Infinix OS</title>
 </head>
 <body>
-    <main>
-        <header>
-          <img class="background" src="" />
-        </header>
-        <div class="contentButtons">
-          <button class="donwload">
-            <svg width="26" height="26" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
-              <g fill="none" fill-rule="evenodd" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" transform="translate(4 3)">
-                <path d="m2.5 7.5 4 4.232 4-4.191" />
-                <path d="m6.5.5v11" />
-                <path d="m.5 14.5h12" />
-              </g>
-            </svg>
-          </button>
-          <button class="play">
-            <svg width="26" height="26" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
-              <g fill="none" fill-rule="evenodd" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" transform="translate(3 4)">
-                <path d="m3.5 10.5-1-.0345601c-1.10193561-.0037085-2-.93261826-2-2.03456011v-5.9654399c0-1.1045695.8954305-2 2-2l10-.00245977c1.1045695 0 2 .8954305 2 2v6.00245977c0 1.1045695-.8954305 2.00000001-2 2.00000001-.0014957 0-.3348291.01234-1 .0370199" />
-                <path d="m7.5 12.5-3-3h6z" transform="matrix(1 0 0 -1 0 22)" />
-              </g>
-            </svg>
-            <span>Assistir</span>
-          </button>
-        </div>
-        <p class="title"></p>
-        <span class="vote"></span>
-        <span class="plataforms">
-          <span class="text"></span>
-          <svg viewBox="-14.16 -14.16 52.32 52.32" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path fill-rule="evenodd" clip-rule="evenodd" d="M21.007 8.27C22.194 9.125 23 10.45 23 12c0 1.55-.806 2.876-1.993 3.73.24 1.442-.134 2.958-1.227 4.05-1.095 1.095-2.61 1.459-4.046 1.225C14.883 22.196 13.546 23 12 23c-1.55 0-2.878-.807-3.731-1.996-1.438.235-2.954-.128-4.05-1.224-1.095-1.095-1.459-2.611-1.217-4.05C1.816 14.877 1 13.551 1 12s.816-2.878 2.002-3.73c-.242-1.439.122-2.955 1.218-4.05 1.093-1.094 2.61-1.467 4.057-1.227C9.125 1.804 10.453 1 12 1c1.545 0 2.88.803 3.732 1.993 1.442-.24 2.956.135 4.048 1.227 1.093 1.092 1.468 2.608 1.227 4.05Zm-4.426-.084a1 1 0 0 1 .233 1.395l-5 7a1 1 0 0 1-1.521.126l-3-3a1 1 0 0 1 1.414-1.414l2.165 2.165 4.314-6.04a1 1 0 0 1 1.395-.232Z"></path></g></svg>
-        </span>
-        <p class="genere"></p>
-        <p class="description"></p>
-        <div class="actors"></div>
-      </main>
-      <script>
-    
-        // Função para obter o valor de um parâmetro na URL
-        function getURLParameter(name) {
-          name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
-          var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
-          var results = regex.exec(location.search);
-          return results === null ? '': decodeURIComponent(results[1].replace(/\+/g, ' '));
+  <main>
+    <header>
+      <img class="background" src="" />
+    </header>
+    <div class="contentButtons">
+      <button class="donwload">
+        <svg width="26" height="26" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+          <g fill="none" fill-rule="evenodd" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" transform="translate(4 3)">
+            <path d="m2.5 7.5 4 4.232 4-4.191" />
+            <path d="m6.5.5v11" />
+            <path d="m.5 14.5h12" />
+          </g>
+        </svg>
+      </button>
+      <button class="play">
+        <svg width="26" height="26" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+          <g fill="none" fill-rule="evenodd" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" transform="translate(3 4)">
+            <path d="m3.5 10.5-1-.0345601c-1.10193561-.0037085-2-.93261826-2-2.03456011v-5.9654399c0-1.1045695.8954305-2 2-2l10-.00245977c1.1045695 0 2 .8954305 2 2v6.00245977c0 1.1045695-.8954305 2.00000001-2 2.00000001-.0014957 0-.3348291.01234-1 .0370199" />
+            <path d="m7.5 12.5-3-3h6z" transform="matrix(1 0 0 -1 0 22)" />
+          </g>
+        </svg>
+        <span>Assistir</span>
+      </button>
+    </div>
+    <p class="title"></p>
+    <span class="vote"></span>
+    <span class="plataforms">
+      <span class="text"></span>
+      <svg viewBox="-14.16 -14.16 52.32 52.32" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path fill-rule="evenodd" clip-rule="evenodd" d="M21.007 8.27C22.194 9.125 23 10.45 23 12c0 1.55-.806 2.876-1.993 3.73.24 1.442-.134 2.958-1.227 4.05-1.095 1.095-2.61 1.459-4.046 1.225C14.883 22.196 13.546 23 12 23c-1.55 0-2.878-.807-3.731-1.996-1.438.235-2.954-.128-4.05-1.224-1.095-1.095-1.459-2.611-1.217-4.05C1.816 14.877 1 13.551 1 12s.816-2.878 2.002-3.73c-.242-1.439.122-2.955 1.218-4.05 1.093-1.094 2.61-1.467 4.057-1.227C9.125 1.804 10.453 1 12 1c1.545 0 2.88.803 3.732 1.993 1.442-.24 2.956.135 4.048 1.227 1.093 1.092 1.468 2.608 1.227 4.05Zm-4.426-.084a1 1 0 0 1 .233 1.395l-5 7a1 1 0 0 1-1.521.126l-3-3a1 1 0 0 1 1.414-1.414l2.165 2.165 4.314-6.04a1 1 0 0 1 1.395-.232Z"></path></g></svg>
+    </span>
+    <p class="genere"></p>
+    <p class="description"></p>
+    <div class="actors"></div>
+  </main>
+
+  <nav class="nav_mobile">
+    <div class="op-search content_button navigable">
+      <svg width="26" height="26" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" fill="none"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill="#ffffff" fill-rule="evenodd" d="M4 9a5 5 0 1110 0A5 5 0 014 9zm5-7a7 7 0 104.2 12.6.999.999 0 00.093.107l3 3a1 1 0 001.414-1.414l-3-3a.999.999 0 00-.107-.093A7 7 0 009 2z"></path> </g></svg>
+      <div></div>
+    </div>
+    <div class="content_button navigable active">
+      <svg width="26" height="26" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+
+        <g fill="none" fill-rule="evenodd" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" transform="translate(2 3)">
+
+          <path d="m5.5.5h6c1.1045695 0 2 .8954305 2 2v10c0 1.1045695-.8954305 2-2 2h-6c-1.1045695 0-2-.8954305-2-2v-10c0-1.1045695.8954305-2 2-2zm8 2.5h1c1.1045695 0 2 .8954305 2 2v5c0 1.1045695-.8954305 2-2 2h-1z" />
+        </g>
+      </svg>
+      <div></div>
+    </div>
+    <div class="content_button navigable">
+      <svg width="26" height="26" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+        <g fill="none" fill-rule="evenodd" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" transform="translate(4 3)">
+          <path d="m2.5 7.5 4 4.232 4-4.191" />
+          <path d="m6.5.5v11" />
+          <path d="m.5 14.5h12" />
+        </g>
+      </svg>
+      <div></div>
+    </div>
+    <div class="content_button navigable">
+      <svg width="26" height="26" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+        <g fill="none" fill-rule="evenodd" transform="translate(3 5)">
+          <path d="m2.49278838.53409401 10.00000002-.03605833c1.1045623-.00398287 2.0032157.88821306 2.0071986 1.99277538.0000087.00240386.000013.00480774.000013.00721162v5.00197732c0 1.1045695-.8954305 2-2 2h-10c-1.1045695 0-2-.8954305-2-2v-4.965919c0-1.10175423.89104131-1.99601428 1.99278838-1.99998699z" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" />
+          <path d="m9.46666667 4.6-2.66666667-2c-.2209139-.16568542-.53431458-.1209139-.7.1-.06491106.08654809-.1.19181489-.1.3v4c0 .27614237.22385763.5.5.5.10818511 0 .21345191-.03508894.3-.1l2.66666667-2c.2209139-.16568542.26568542-.4790861.1-.7-.02842713-.03790283-.06209717-.07157288-.1-.1z" fill="#ffffff" fill-rule="nonzero" />
+          <path d="m2.464 11.5h10.036" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" />
+        </g>
+      </svg>
+      <div></div>
+    </div>
+    <div class="content_button navigable">
+      <svg width="26" height="26" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+        <g fill="none" fill-rule="evenodd" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" transform="translate(4 2)">
+          <path d="m2.5 6.5h6c1.1045695 0 2 .8954305 2 2v2.5c0 2.4852814-2.01471863 4.5-4.5 4.5h-1c-2.48528137 0-4.5-2.0147186-4.5-4.5v-2.5c0-1.1045695.8954305-2 2-2zm8 2h1c1.1045695 0 2 .8954305 2 2s-.8954305 2-2 2h-1" />
+          <path d="m4.5 4.5v-4" />
+          <path d="m6.5 4.5v-2" />
+        </g>
+      </svg>
+      <div></div>
+    </div>
+  </nav>
+  <script>
+
+    const nav_mobile = document.querySelectorAll('.nav_mobile');
+    const allSideMenu = document.querySelectorAll('.nav_mobile .content_button');
+
+    allSideMenu.forEach(item=> {
+      const marker = item;
+
+      item.addEventListener('click', function () {
+        allSideMenu.forEach(i=> {
+          i.classList.remove('active');
+        })
+        // removendo nome active do atributo class
+        marker.classList.add('active');
+      })
+    });
+
+    const buttonPage_2 = document.querySelector('.nav_mobile .content_button:nth-child(2)');
+    const buttonPage_3 = document.querySelector('.nav_mobile .content_button:nth-child(3)');
+    const buttonPage_4 = document.querySelector('.nav_mobile .content_button:nth-child(4)');
+    const buttonPage_5 = document.querySelector('.nav_mobile .content_button:nth-child(5)');
+
+    buttonPage_2.addEventListener('click', ()=> {
+      window.location.href = "../index.html"
+    });
+
+    buttonPage_3.addEventListener('click', ()=> {
+      window.location.href = "../downloads.html"
+    });
+
+    buttonPage_4.addEventListener('click', ()=> {
+      window.location.href = "../series.html"
+    });
+
+    buttonPage_5.addEventListener('click', ()=> {
+      window.location.href = "../cofee.html"
+    });
+
+    // Obter todos os elementos navegáveis
+    const navigableElements = document.querySelectorAll('.navigable');
+
+    // Adicionar eventos de foco aos elementos navegáveis
+    for (let i = 0; i < navigableElements.length; i++) {
+      navigableElements[i].addEventListener('focus', handleElementFocus);
+    }
+
+    // Função para lidar com o foco nos elementos navegáveis
+    function handleElementFocus(event) {
+      const focusedElement = event.target;
+
+      // Role a página para que o elemento focado seja exibido na tela
+      focusedElement.scrollIntoView({
+        behavior: 'smooth', block: 'center'
+      });
+    }
+
+    // Adicionar eventos de teclado para navegação
+    document.addEventListener('keydown', handleKeyDown);
+
+    // Função para lidar com eventos de teclado
+    function handleKeyDown(event) {
+      const keyCode = event.keyCode;
+
+      // Verificar as teclas de direção para navegação
+      if (keyCode === 37 || keyCode === 38 || keyCode === 39 || keyCode === 40) {
+        event.preventDefault();
+
+        // Obter o elemento atualmente focado
+        const focusedElement = document.activeElement;
+
+        // Obter todos os elementos navegáveis novamente
+        const allNavigableElements = document.querySelectorAll('.navigable');
+
+        // Obter o índice do elemento atualmente focado
+        const currentIndex = Array.from(allNavigableElements).indexOf(focusedElement);
+
+        // Calcular o índice do próximo elemento com base na tecla de direção pressionada
+        let nextIndex;
+        if (keyCode === 37 || keyCode === 38) {
+          nextIndex = currentIndex - 1 >= 0 ? currentIndex - 1: allNavigableElements.length - 1;
+        } else if (keyCode === 39 || keyCode === 40) {
+          nextIndex = currentIndex + 1 < allNavigableElements.length ? currentIndex + 1: 0;
         }
-    
-        var id = getURLParameter('DateId');
-        //var id = 405774
-        console.log(id)
-    
-        const API_KEY = 'api_key=1cf50e6248dc270629e802686245c2c8';
-        const BASE_URL = 'https://api.themoviedb.org/3';
-        const IMG_URL = 'https://image.tmdb.org/t/p/original';
-    
-    
-    
-        async function exibirPlataformaStreaming(filmeId) {
-          const detalhesUrl = `${BASE_URL}/movie/${filmeId}?${API_KEY}`;
-    
-          try {
-            const response = await fetch(detalhesUrl);
-            const data = await response.json();
-    
-            const plataformas = data.production_companies.map(company => company.name);
-           
-            document.querySelector('.plataforms .text').innerHTML = plataformas[0];
-    
-            switch (plataformas[0]) {
-              case "Disney+":
-                document.querySelector('.plataforms svg').classList.add('disney');
-                break;
-              case "Netflix":
-                document.querySelector('.plataforms svg').classList.add('netflix');
-                break;
-              case "HBO":
-                document.querySelector('.plataforms svg').classList.add('hbo');
-                break;
-              case "Fox":
-                document.querySelector('.plataforms svg').classList.add('fox');
-                break;
+
+        // Obter o próximo elemento a ser focado
+        const nextElement = allNavigableElements[nextIndex];
+
+        // Focar no próximo elemento
+        nextElement.focus();
+      }
+    }
+
+    // Função para obter o valor de um parâmetro na URL
+    function getURLParameter(name) {
+      name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+      var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+      var results = regex.exec(location.search);
+      return results === null ? '': decodeURIComponent(results[1].replace(/\+/g, ' '));
+    }
+
+    var id = getURLParameter('DateId');
+    //var id = 405774
+    console.log(id)
+
+    const API_KEY = 'api_key=1cf50e6248dc270629e802686245c2c8';
+    const BASE_URL = 'https://api.themoviedb.org/3';
+    const IMG_URL = 'https://image.tmdb.org/t/p/original';
+    const IMG_URL_W500 = 'https://image.tmdb.org/t/p/w500';
+
+
+
+    async function exibirPlataformaStreaming(filmeId) {
+      const detalhesUrl = `${BASE_URL}/movie/${filmeId}?${API_KEY}`;
+
+      try {
+        const response = await fetch(detalhesUrl);
+        const data = await response.json();
+
+        const plataformas = data.production_companies.map(company => company.name);
+
+        document.querySelector('.plataforms .text').innerHTML = plataformas[0];
+
+        switch (plataformas[0]) {
+          case "Disney+":
+            document.querySelector('.plataforms svg').classList.add('disney');
+            break;
+          case "Netflix":
+            document.querySelector('.plataforms svg').classList.add('netflix');
+            break;
+          case "HBO":
+            document.querySelector('.plataforms svg').classList.add('hbo');
+            break;
+          case "Fox":
+            document.querySelector('.plataforms svg').classList.add('fox');
+            break;
+        }
+        // Check the streaming platforms and display the corresponding message
+
+      } catch (error) {
+        console.error('Ocorreu um erro:', error);
+      }
+    }
+
+    exibirPlataformaStreaming(id);
+
+
+
+    function exibirInformacoesFilme(idFilme) {
+      const url = `${BASE_URL}/movie/${idFilme}?${API_KEY}&language=pt-BR`;
+      fetch(url)
+      .then(response => response.json())
+      .then(filme => {
+        // ...
+
+        // Fetch movie show cast
+        const castUrl = `${BASE_URL}/movie/${idFilme}/credits?${API_KEY}`;
+        fetch(castUrl)
+        .then(res => res.json())
+        .then(castData => {
+          // Log the name and photo URL of each actor
+          castData.cast.forEach(actor => {
+            console.log('Ator:', actor.name);
+            console.log('Foto:', IMG_URL + actor.profile_path);
+
+            const actorDiv = document.createElement('div');
+            actorDiv.classList.add('actor');
+
+            const actorPhoto = document.createElement('img');
+            actorPhoto.src = IMG_URL_W500 +  actor.profile_path;
+            actorPhoto.alt = actor.name;
+            actorDiv.appendChild(actorPhoto);
+
+            const actorName = document.createElement('p');
+            actorName.innerText = actor.name;
+            actorDiv.appendChild(actorName);
+            console.log(actor.profile_path)
+
+            if (! (actor.profile_path == null)) {
+              document.querySelector('.actors').appendChild(actorDiv);
             }
-            // Check the streaming platforms and display the corresponding message
-    
-          } catch (error) {
-            console.error('Ocorreu um erro:', error);
+
+          });
+        })
+        .catch(error => console.error('Erro ao obter informações do elenco:',
+          error));
+
+
+        console.log('Título:', filme.title);
+        console.log('Sinopse:', filme.overview);
+        console.log('Data de lançamento:', filme.release_date);
+        console.log('Avaliação:', filme.vote_average);
+        console.log('Gêneros:', filme.genres.map(genero => genero.name).join(', '));
+
+
+        document.querySelector('.background').src = IMG_URL + filme.backdrop_path;
+        document.querySelector('.title').innerText = filme.title
+        document.querySelector('.vote').innerText = filme.vote_average + "%"
+        document.querySelector('.genere').innerText = filme.genres.map(genero => genero.name).join(', ')
+        document.querySelector('.description').innerText = filme.overview.substring(0, 200) + "..."
+
+
+        document.querySelector('.play').addEventListener('click', ()=> {
+          let MovieID = function(valor) {
+            window.location = "movie.html?minhaVariavel=" + valor;
           }
-        }
-    
-        exibirPlataformaStreaming(id);
-    
-    
-    
-        function exibirInformacoesFilme(idFilme) {
-          const url = `${BASE_URL}/movie/${idFilme}?${API_KEY}&language=pt-BR`;
-    
-    
-    
-          fetch(url)
-          .then(response => response.json())
-          .then(filme => {
-            // ...
-    
-            // Fetch movie show cast
-            const castUrl = `${BASE_URL}/movie/${idFilme}/credits?${API_KEY}`;
-            fetch(castUrl)
-            .then(res => res.json())
-            .then(castData => {
-              // Log the name and photo URL of each actor
-              castData.cast.forEach(actor => {
-                console.log('Ator:', actor.name);
-                console.log('Foto:', IMG_URL + actor.profile_path);
-    
-                const actorDiv = document.createElement('div');
-                actorDiv.classList.add('actor');
-    
-                const actorPhoto = document.createElement('img');
-                actorPhoto.src = IMG_URL +  actor.profile_path;
-                actorPhoto.alt = actor.name;
-                actorDiv.appendChild(actorPhoto);
-    
-                const actorName = document.createElement('p');
-                actorName.innerText = actor.name;
-                actorDiv.appendChild(actorName);
-    
-                document.querySelector('.actors').appendChild(actorDiv);
-              });
-            })
-            .catch(error => console.error('Erro ao obter informações do elenco:', error));
-    
-    
-            console.log('Título:', filme.title);
-            console.log('Sinopse:', filme.overview);
-            console.log('Data de lançamento:', filme.release_date);
-            console.log('Avaliação:', filme.vote_average);
-            console.log('Gêneros:', filme.genres.map(genero => genero.name).join(', '));
-    
-    
-            document.querySelector('.background').src = IMG_URL + filme.backdrop_path
-            document.querySelector('.title').innerText = filme.title
-            document.querySelector('.vote').innerText = filme.vote_average + "%"
-            document.querySelector('.genere').innerText = filme.genres.map(genero => genero.name).join(', ')
-            document.querySelector('.description').innerText = filme.overview
-    
-    
-            document.querySelector('.play').addEventListener('click', ()=> {
-              let MovieID = function(valor) {
-                window.location = "movie.html?minhaVariavel=" + valor;
-              }
-              let Movie_Id_Url = id;
-              MovieID(Movie_Id_Url);
-            });
-          })
-          .catch(error => console.error('Erro ao obter informações do filme:', error));
-        }
-    
-        // Exemplo de uso da função
-        exibirInformacoesFilme(id);
-    
-    
-      </script>
+          let Movie_Id_Url = id;
+          MovieID(Movie_Id_Url);
+        });
+      })
+      .catch(error => console.error('Erro ao obter informações do filme:', error));
+    }
+
+    // Exemplo de uso da função
+    exibirInformacoesFilme(id);
+
+
+  </script>
 </html>
