@@ -145,7 +145,7 @@ function updateCarousel(movies, carousel) {
       .then(filme => {
 
 
-        document.querySelector('.image_destaque2').src = IMG_URL + filme.backdrop_path;
+        document.querySelector('.image_destaque2').src = 'https://image.tmdb.org/t/p/original' + filme.backdrop_path;
         document.querySelector('.caption_destaque2').innerText = filme.title
         document.querySelector('.popularity_destaque2').innerText = filme.vote_average + "%"
         document.querySelector('.date_destaque2').innerText = filme.release_date
