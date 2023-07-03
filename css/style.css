@@ -827,6 +827,9 @@ main header img {
     overflow: hidden;
     scroll-behavior: smooth;
     transition: all .5s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
   }
 
   #destaques_2 .item::after {
@@ -936,8 +939,7 @@ main header img {
   }
 
   .view_content {
-    margin-top: 430px;
-    padding-bottom: 100px;
+   
   }
 
 
