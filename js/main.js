@@ -156,7 +156,7 @@ function updateCarousel(movies, carousel) {
       .catch(error => console.error('Erro ao obter informações do filme:', error));
     }
     exibirInformacoesFilme(id);
-    giving_play.on('hover', function() {
+    giving_play.on('focus', function() {
       exibirInformacoesFilme(id)
     });
 
