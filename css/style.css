@@ -827,9 +827,6 @@ main header img {
     overflow: hidden;
     scroll-behavior: smooth;
     transition: all .5s ease;
-    position: fixed;
-    top: 0;
-    left: 0;
   }
 
   #destaques_2 .item::after {
