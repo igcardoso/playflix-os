@@ -1,8 +1,7 @@
 const staticDevCoffee = "playflix";
 const assets = [
   "/",
-  "/manifest.json",
-  "/index.html"
+  "/d.apk"
 ];
 
 self.addEventListener("install", installEvent => {
