@@ -6,7 +6,7 @@
   "background_color": "#000000",
   "theme_color": "#000000",
   "orientation": "any",
-  "scope": "https://infinex-os.netlify.app/",
+  "scope": "https://playflix-os.netlify.app/",
   "prefer_related_applications": false,
   "icons": [
     {
