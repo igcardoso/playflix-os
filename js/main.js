@@ -169,7 +169,7 @@ function updateCarousel(movies, carousel) {
 
   // Inicializar o Owl Carousel
   carousel.owlCarousel({
-    loop: true,
+    loop: false,
     margin: 10,
     nav: true,
     navText: [`<svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
