@@ -87,6 +87,9 @@
       height: 100vh;
     }
 
+    .spinner.active div {
+      visibility: hidden;
+    }
 
     .spinner.active div:nth-child(1) {
       width: 100%;
@@ -106,7 +109,9 @@
       top: 40%;
       left: 25%;
       right: 25%;
-      color: red;
+      background: -webkit-linear-gradient(20deg, rgb(158,0,0), rgb(98,0,0));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
       overflow: hidden;
       width: 0;
       height: 3.5rem;
@@ -151,7 +156,7 @@
 </head>
 <body>
   <div id="loading" class="loading">
-    <div id="spinner" class="spinner">
+    <div id="spinner" class=" active spinner">
       <div>
         <h1 class="title">PlayFlix</h1>
       </div>
