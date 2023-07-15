@@ -156,8 +156,8 @@
   </style>
 </head>
 <body>
-  <div id="loading" class="loading">
-    <div id="spinner" class=" active spinner">
+  <div class="loading">
+    <div class=" spinner">
       <div>
         <h1 class="title">PlayFlix</h1>
       </div>
@@ -335,6 +335,13 @@
   <script src="js/main.js" type="text/javascript" charset="utf-8"></script>
 
   <script type="text/javascript" charset="utf-8">
+  
+  setTimeout(function() {
+    document.querySelector('.spinner').classList.add('active')
+  }, 3000);
+  setTimeout(function() {
+    document.querySelector('.loading').classList.add('active')
+  }, 8000);
 
     if ("serviceWorker" in navigator) {
       window.addEventListener("load", function() {
@@ -348,14 +355,6 @@
     window.addEventListener('offline', () => {
       window.location = "cached_local_page.html"
     });
-
-
-    setTimeout(function() {
-      document.querySelector('#spinner').classList.add('active')
-    }, 3000);
-    setTimeout(function() {
-      document.querySelector('#loading').classList.add('active')
-    }, 8000);
 
   </script>
 </body>
