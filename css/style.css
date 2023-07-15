@@ -109,7 +109,7 @@ body {
 
 #search-results .item img {
   width: 100%;
-  border-radius: 1.2em;
+  border-radius: .7em;
 }
 
 #search-results .item .giving_play {
@@ -131,7 +131,7 @@ body {
 }
 
 .section-indicacoes .item img {
-  border-radius: 1.2em;
+  border-radius: .7em;
 }
 
 .section-indicacoes .item .giving_play {
