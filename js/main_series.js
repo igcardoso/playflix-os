@@ -141,7 +141,7 @@ function updateCarousel(movies, carousel) {
       item.append(image);
     }
     const voteCont = $('<i class="bx bxs-star voteCont">').text(" " + vote_count);
-    const caption = $('<p>').text(name);
+    // const caption = $('<p>').text(name);
 
     const giving_play = $('<button class="navigable giving_play">').text('').on('click', function() {
       var DateId = id;
@@ -193,7 +193,7 @@ function updateCarousel(movies, carousel) {
     });
 
     item.append(voteCont);
-    item.append(caption);
+    // item.append(caption);
     item.append(giving_play);
     carousel.append(item);
   });
