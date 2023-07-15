@@ -980,7 +980,7 @@ main header img {
   .spinner div {
     width: 10px;
     height: 10px;
-    background: -webkit-linear-gradient(20deg, rgb(158,0,0), rgb(98,0,0));
+    background: #ffffff;
     margin: 5px;
     border-radius: 8em;
     overflow: hidden;
@@ -1047,6 +1047,7 @@ main header img {
 @keyframes boll1 {
     0% {
       transform: scale(0);
+      opacity: .5;
     }
 
     100% {
@@ -1056,6 +1057,7 @@ main header img {
 @keyframes boll2 {
     20% {
       transform: scale(0);
+      opacity: .5;
     }
 
     100% {
@@ -1065,6 +1067,7 @@ main header img {
 @keyframes boll3 {
     40% {
       transform: scale(0);
+      .5
     }
 
     100% {
