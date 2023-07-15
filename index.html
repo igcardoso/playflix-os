@@ -36,118 +36,123 @@
     }
 
 
-    .loading {
-      width: 100%;
-      height: 100vh;
-      background: #000000;
-      margin: 0;
-      position: absolute;
-      top: 0;
-      left: 0;
-      z-index: 100000;
-    }
+  .loading {
+    width: 100%;
+    height: 100vh;
+    background: #000000;
+    margin: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100000;
+  }
+  
+  .loading.active {
+    display: none;
+  }
 
-    .loading.active {
-      display: none;
-    }
+  .spinner {
+    position: absolute;
+    bottom: 40%;
+    left: 40%;
+    right: 40%;
+    display: flex;
+  }
 
-    .spinner {
-      position: absolute;
-      bottom: 40%;
-      left: 40%;
-      right: 40%;
-      display: flex;
-    }
+  .spinner div {
+    width: 10px;
+    height: 10px;
+    background: -webkit-linear-gradient(20deg, rgb(158,0,0), rgb(98,0,0));
+    margin: 5px;
+    border-radius: 8em;
+    overflow: hidden;
+  }
 
-    .spinner div {
-      width: 10px;
-      height: 10px;
-      background: -webkit-linear-gradient(20deg, rgb(158,0,0), rgb(98,0,0));
-      margin: 5px;
-      border-radius: 8em;
-      overflow: hidden;
-    }
-
-    .spinner div:nth-child(1) {
-      animation: boll1 2s infinite;
-    }
-    .spinner div:nth-child(2) {
-      animation: boll2 2s infinite;
-    }
-    .spinner div:nth-child(3) {
-      animation: boll3 2s infinite;
-    }
-
-    .spinner.active {
-      top: 0;
-      left: 0;
-      bottom: auto;
-      right: auto;
-      width: 100%;
-      height: 100vh;
-    }
-
-    .spinner.active div {
-      visibility: hidden;
-    }
-
-    .spinner.active div:nth-child(1) {
-      width: 100%;
-      height: 100vh;
-      position: absolute;
-      top: 0;
-      left: 0;
-      animation: none;
-      border-radius: 0;
-      margin: 0;
-      background: red;
-      visibility: visible;
-    }
-
-    .spinner .title {
-      background: -webkit-linear-gradient(20deg, rgb(158,0,0), rgb(98,0,0));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      overflow: hidden;
-      width: 0;
-      height: 3.5rem;
-      transition: 5s ease;
-      transition-delay: 1s;
-      font-size: 3rem;
-    }
-
-    .spinner.active .title {
-      width: 220px;
-    }
-
+  .spinner div:nth-child(1) {
+    animation: boll1 2s infinite;
+  }
+  .spinner div:nth-child(2) {
+    animation: boll2 2s infinite;
+  }
+  .spinner div:nth-child(3) {
+    animation: boll3 2s infinite;
+  }
+  
+  .spinner.active {
+    top: 0;
+    left: 0;
+    bottom: auto;
+    right: auto;
+    width: 100%;
+    height: 100vh;
+  }
+  
+  .spinner.active div {
+    visibility: hidden;
+  }
+  
+  .spinner.active div:nth-child(1) {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: none;
+    border-radius: 0;
+    margin: 0;
+    background: #000000;
+    visibility: visible;
+  } 
+  
+  .spinner .title {
+    position: absolute;
+    top: 40%;
+    left: 25%;
+    right: 25%;
+    background: -webkit-linear-gradient(20deg, rgb(158,0,0), rgb(98,0,0));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+    overflow: hidden;
+    width: 0;
+    height: 3.5rem;
+    transition: 5s ease;
+    transition-delay: 1s;
+    z-index: 100;
+    font-size: 3rem;
+  }
+  
+  .spinner.active .title {
+    width: 220px;
+  }
+  
 
 @keyframes boll1 {
-      0% {
-        transform: scale(0);
-      }
-
-      100% {
-        transform: scale(1);
-      }
+    0% {
+      transform: scale(0);
     }
+
+    100% {
+      transform: scale(1);
+    }
+  }
 @keyframes boll2 {
-      20% {
-        transform: scale(0);
-      }
-
-      100% {
-        transform: scale(1);
-      }
+    20% {
+      transform: scale(0);
     }
+
+    100% {
+      transform: scale(1);
+    }
+  }
 @keyframes boll3 {
-      40% {
-        transform: scale(0);
-      }
-
-      100% {
-        transform: scale(1);
-      }
+    40% {
+      transform: scale(0);
     }
+
+    100% {
+      transform: scale(1);
+    }
+  }
   </style>
 </head>
 <body>
