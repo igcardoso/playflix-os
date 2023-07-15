@@ -1033,7 +1033,7 @@ main header img {
     overflow: hidden;
     width: 0;
     height: 3.5rem;
-    transition: 5s ease;
+    transition: 3s ease;
     transition-delay: 1s;
     z-index: 100;
     font-size: 3rem;
