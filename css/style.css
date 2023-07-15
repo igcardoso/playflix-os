@@ -965,6 +965,7 @@ main header img {
     position: absolute;
     top: 0;
     left: 0;
+    z-index: 100000;
   }
   
   .loading.active {
