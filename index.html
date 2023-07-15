@@ -105,17 +105,19 @@
     }
 
     .spinner .title {
-      margin: 40% auto;
+      position: absolute;
+      top: 40%;
+      left: 25%;
+      right: 25%;
       background: -webkit-linear-gradient(20deg, rgb(158,0,0), rgb(98,0,0));
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       overflow: hidden;
-      width: 0;
+      width: auto;
       height: 3.5rem;
       transition: 5s ease;
       transition-delay: 1s;
       font-size: 3rem;
-      background: blue;
     }
 
     .spinner.active .title {
