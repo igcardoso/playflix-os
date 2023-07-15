@@ -229,6 +229,14 @@
     window.addEventListener('offline', () => {
       window.location = "cached_local_page.html"
     });
+    
+    
+  setTimeout(function() {
+    document.querySelector('.spinner').classList.add('active')
+  }, 3000);
+  setTimeout(function() {
+    document.querySelector('.loading').classList.add('active')
+  }, 8000);
 
   </script>
 </body>
