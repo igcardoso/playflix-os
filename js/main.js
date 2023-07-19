@@ -298,6 +298,7 @@ function searchMovies(event) {
 function resetSearch() {
   searchResults.empty();
   searchResults.hide();
+  searchInput.val('');
   carousel.show();
   pageSearch.classList.toggle('visible');
 }
