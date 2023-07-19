@@ -355,7 +355,6 @@ function searchMovies(event) {
 
   if (searchTerm !== '') {
     getMoviesForCarousel(searchQuery, searchResults);
-    searchInput.val('');
     searchResults.show();
     carousel.hide();
   }
