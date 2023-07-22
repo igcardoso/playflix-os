@@ -1038,7 +1038,7 @@ main header img {
   }
   
   .spinner.active h1 {
-    width: 220px;
+    width: calc(3rem*8);
   }
   
 
