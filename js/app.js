@@ -178,9 +178,11 @@ window.addEventListener('scroll', () => {
   if (currentScrollPosition > lastScrollPosition) {
     // Rolagem para baixo
     scrollDiv.style.bottom = '-100%';
+    scrollDiv.style.opacity = '0';
   } else {
     // Rolagem para cima
     scrollDiv.style.bottom = '0';
+    scrollDiv.style.opacity = '1';
   }
 
   lastScrollPosition = currentScrollPosition;
