@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" type="text/css" href="css/owl/owl.carousel.min.css">
+  <link rel="stylesheet" type="text/css" href="css/owl/owl.theme.default.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/global.css">
+  <!-- ios support -->
+  <link rel="apple-touch-icon" href="images/icons/icon-72x72.png">
+  <link rel="apple-touch-icon" href="images/icons/icon-96x96.png">
+  <link rel="apple-touch-icon" href="images/icons/icon-128x128.png">
+  <link rel="apple-touch-icon" href="images/icons/icon-144x144.png">
+  <link rel="apple-touch-icon" href="images/icons/icon-152x152.png">
+  <link rel="apple-touch-icon" href="images/icons/icon-192x192.png">
+  <link rel="apple-touch-icon" href="images/icons/icon-384x384.png">
+  <link rel="apple-touch-icon" href="images/icons/icon-512x512.png">
+  <meta name="apple-mobile-web-app-status-bar" content="#000000">
+  <meta name="theme-color" content="#000000">
+  <!-- app photo guia -->
+  <link rel="icon" href="images/icons/icon-512x512.png" type="image/png">
+
+  <title>Infinix OS</title>
+  <style type="text/css" media="all">
+    #destaques_1 .item .popularity {
+      color: rgb(0,253,61);
+    }
+  </style>
+</head>
+<body>
+  <div class="loading">
+    <div class="spinner">
+      <div>
+        <h1>PlayFlix</h1>
+      </div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+  <img id="background" src="https://www.themoviedb.org/t/p/original/wRxLAw4l17LqiFcPLkobriPTZAw.jpg" alt="" />
+  <div class="gradient"></div>
+  <main>
+    <header>
+      <span><img src="accets/icons/icon-512x512.png" alt="Playflix"></span>
+      <span class="navigable">Minha lista</span>
+      <span class="navigable">Assinatura</span>
+      <!--<img class="profileContent" src="accets/img/profile.jpg" alt="">-->
+    </header>
+  </main>
+
+  <div class="pageSearch">
+
+    <div class="search-form">
+      <form id="search-form">
+        <div class="contentBack">
+          <svg id="back-button" width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g id="Arrow / Chevron_Left">
+              <path id="Vector" d="M15 19L8 12L15 5" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </g>
+          </svg>
+        </div>
+        <input type="text" id="search-input" placeholder="Buscar apenas filmes">
+        <button type="submit"><i class="bx bx-search"></i></button>
+      </form>
+
+    </div>
+    <div id="search-results">
+
+      <div class="watchMode" id="watchSeries">
+        Click aqui e busque por series
+        na página de séries
+      </div>
+
+    </div>
+  </div>
+  <div class="content_highlights">
+    <div id="destaques_1"></div>
+    <div id="destaques_2">
+      <div class="item">
+        <img class="image image_destaque2" src="" alt="">
+        <div class="info info_destaque2">
+          <h3 class="caption caption_destaque2"></h3>
+          <span class="date date_destaque2"></span>
+          <i class="bx bxs-star voteCont_destaque2 voteCont"></i>
+          <p class="description description_destaque2"></p>
+          <button class="popularity   popularity_destaque2"></button>
+
+
+        </div>
+      </div>
+    </div>
+    <button id="next_1">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g id="Arrow / Chevron_Right">
+          <path id="Vector" d="M9 5L16 12L9 19" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        </g>
+      </svg>
+    </button>
+    <button id="prev_1">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g id="Arrow / Chevron_Left">
+          <path id="Vector" d="M15 19L8 12L15 5" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        </g>
+      </svg>
+    </button>
+  </div>
+
+  <p class="title animated_elements">
+    Bem vindo, de volta.
+  </p>
+  <p class="Highlights_Title animated_elements">
+    Destaques
+  </p>
+  <div class="content_highlights h2">
+    <div id="destaques"></div>
+    <button id="next">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g id="Arrow / Chevron_Right">
+          <path id="Vector" d="M9 5L16 12L9 19" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        </g>
+      </svg>
+    </button>
+  </div>
+  <section class="view_content">
+    <h4 class="titleSection animated_elements ">Filmes Populares</h4>
+    <div tabindex="0" class="owl-carousel owl-theme section-indicacoes">
+      <!-- Destaque Carousel -->
+    </div>
+    <h4 class="titleSection animated_elements">Filmes Animados</h4>
+    <div tabindex="0" class="owl-carousel owl-theme section-indicacoes">
+      <!-- First Carousel -->
+    </div>
+    <h4 class="titleSection animated_elements">Filmes Populares</h4>
+    <div tabindex="0" class="owl-carousel owl-theme section-indicacoes">
+      <!-- Second Carousel -->
+    </div>
+    <h4 class="titleSection animated_elements">Filmes Populares</h4>
+    <div tabindex="0" class="owl-carousel owl-theme section-indicacoes"></div>
+    <h4 class="titleSection animated_elements">Filmes Populares</h4>
+    <div tabindex="0" class="owl-carousel owl-theme section-indicacoes"></div>
+    <h4 class="titleSection animated_elements">Filmes Populares</h4>
+    <div tabindex="0" class="owl-carousel owl-theme section-indicacoes"></div>
+    <h4 class="titleSection animated_elements">Filmes Populares</h4>
+    <div tabindex="0" class="owl-carousel owl-theme section-indicacoes"></div>
+    <h4 class="titleSection animated_elements">Filmes Populares</h4>
+    <div tabindex="0" class="owl-carousel owl-theme section-indicacoes"></div>
+  </section>
+
+
+  <nav class="nav_mobile">
+    <div class="op-search content_button navigable">
+      <svg width="23" height="23" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+
+        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+          <g id="Icon-Set" sketch:type="MSLayerGroup" transform="translate(-256.000000, -1139.000000)" fill="#ffffff">
+            <path d="M269.46,1163.45 C263.17,1163.45 258.071,1158.44 258.071,1152.25 C258.071,1146.06 263.17,1141.04 269.46,1141.04 C275.75,1141.04 280.85,1146.06 280.85,1152.25 C280.85,1158.44 275.75,1163.45 269.46,1163.45 L269.46,1163.45 Z M287.688,1169.25 L279.429,1161.12 C281.591,1158.77 282.92,1155.67 282.92,1152.25 C282.92,1144.93 276.894,1139 269.46,1139 C262.026,1139 256,1144.93 256,1152.25 C256,1159.56 262.026,1165.49 269.46,1165.49 C272.672,1165.49 275.618,1164.38 277.932,1162.53 L286.224,1170.69 C286.629,1171.09 287.284,1171.09 287.688,1170.69 C288.093,1170.3 288.093,1169.65 287.688,1169.25 L287.688,1169.25 Z" id="search" sketch:type="MSShapeGroup">
+
+            </path>
+          </g>
+        </g>
+      </svg>
+      <div></div>
+    </div>
+    <div class="content_button navigable active">
+      <svg fill="#ffffff" width="22" height="22" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+        <path d="M30.814 13.051l-14.001-12c-0.217-0.187-0.502-0.3-0.813-0.3s-0.596 0.114-0.815 0.302l0.002-0.001-14 12c-0.268 0.23-0.437 0.57-0.437 0.948 0 0 0 0.001 0 0.001v-0 16c0 0.69 0.56 1.25 1.25 1.25h28c0.69-0.001 1.249-0.56 1.25-1.25v-16c-0-0.379-0.168-0.718-0.434-0.948l-0.002-0.001zM28.75 28.75h-25.5v-14.175l12.75-10.929 12.75 10.929z"></path>
+      </svg>
+      <div></div>
+    </div>
+    <div class="content_button navigable">
+      <svg width="26" height="26" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+        <g id="🔍-Product-Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+          <g id="ic_fluent_movies_and_tv_24_regular" fill="#ffffff" fill-rule="nonzero">
+            <path d="M19.7286477,3.91709009 L19.7796475,4.07673953 L20.3309222,5.99926292 C20.4355805,6.36424991 20.2508505,6.74366136 19.9126449,6.89230405 L19.8167039,6.92693721 L9.08979429,10.0020329 L20.2488588,10.0029698 C20.6285546,10.0029698 20.9423498,10.2851237 20.9920122,10.6511993 L20.9988588,10.7529698 L20.9988588,19.2509821 C20.9988588,20.713514 19.8571542,21.9093864 18.4163811,21.9959633 L18.2488588,22.0009821 L5.75,22.0009821 C4.28746816,22.0009821 3.09159572,20.8592775 3.00501879,19.4185045 L3,19.2509821 L2.99979429,10.8590329 L2.47803395,9.03789737 C2.07490554,7.63202154 2.84275532,6.16777873 4.20385145,5.68742476 L4.36350088,5.63642498 L16.3781751,2.19127259 C17.7840509,1.78814418 19.2482937,2.55599396 19.7286477,3.91709009 Z M19.498,11.502 L4.5,11.502 L4.5,19.2509821 C4.5,19.8550436 4.92847749,20.3590287 5.4980814,20.4755866 L5.62219476,20.4945285 L5.75,20.5009821 L18.2488588,20.5009821 C18.8960675,20.5009821 19.4283927,20.0091075 19.4924052,19.3787874 L19.4988588,19.2509821 L19.498,11.502 Z M6.27268011,6.6494258 L4.77695691,7.07831752 C4.15481999,7.25671241 3.7786565,7.8762725 3.89085867,8.49982068 L3.91988247,8.62445396 L4.26421826,9.82529556 L4.55930489,9.74043653 L6.27268011,6.6494258 Z M11.029003,5.28557216 L8.31151617,6.06479896 L6.59814094,9.15580969 L9.31562776,8.37658289 L11.029003,5.28557216 Z M15.7862871,3.92144289 L13.0688003,4.70066969 L11.3554251,7.79168042 L14.0719506,7.01272925 L15.7862871,3.92144289 Z M17.6334765,3.68788446 L16.1127092,6.42755115 L18.6812212,5.6912865 L18.3377549,4.49019556 C18.2305941,4.11648136 17.96425,3.83153666 17.6334765,3.68788446 Z" id="🎨-Color">
+
+            </path>
+          </g>
+        </g>
+      </svg>
+      <div></div>
+    </div>
+    <div class="content_button navigable">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+        <rect x="3" y="7" width="18" height="14" rx="1" stroke="#ffffff" stroke-width="2" stroke-linecap="round" />
+        <path d="M13 7L17 3" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M11 7L7 3" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+      </svg>
+      <div></div>
+    </div>
+    <div style="display:none;" class="content_button navigable">
+      <svg width="26" height="26" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+        <g fill="none" fill-rule="evenodd" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" transform="translate(4 2)">
+          <path d="m2.5 6.5h6c1.1045695 0 2 .8954305 2 2v2.5c0 2.4852814-2.01471863 4.5-4.5 4.5h-1c-2.48528137 0-4.5-2.0147186-4.5-4.5v-2.5c0-1.1045695.8954305-2 2-2zm8 2h1c1.1045695 0 2 .8954305 2 2s-.8954305 2-2 2h-1" />
+          <path d="m4.5 4.5v-4" />
+          <path d="m6.5 4.5v-2" />
+        </g>
+      </svg>
+      <div></div>
+    </div>
+  </nav>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/owl/owl.carousel.min.js"></script>
+  <script src="js/main.js" type="text/javascript" charset="utf-8"></script>
+
+  <script type="text/javascript" charset="utf-8">
+  
+  setTimeout(function() {
+    document.querySelector('.spinner').classList.add('active')
+  }, 3000);
+  setTimeout(function() {
+    document.querySelector('.loading').classList.add('active')
+  }, 8000);
+
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", function() {
+        navigator.serviceWorker
+        .register("/serviceWorker.js")
+        .then(res => console.log("service worker registered"))
+        .catch(err => console.log("service worker not registered", err));
+      });
+    }
+
+    window.addEventListener('offline', () => {
+      window.location = "cached_local_page.html"
+    });
+
+  </script>
+</body>
+</html>
