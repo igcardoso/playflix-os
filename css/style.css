@@ -1026,7 +1026,7 @@ main header img {
     position: absolute;
     top: 40%;
     left: auto;
-    right: 25%;
+    right: 45%;
     color: red;
     overflow: hidden;
     width: 1.8rem;
@@ -1038,6 +1038,7 @@ main header img {
   }
   
   .spinner.active h1 {
+    right: 25%;
     width: calc(1.3rem*8 + 0.2rem);
   }
   
