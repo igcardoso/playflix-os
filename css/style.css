@@ -1046,30 +1046,33 @@ main header img {
 @keyframes boll1 {
     0% {
       transform: scale(0);
-      opacity: .5;
+      opacity: .2;
     }
 
     100% {
       transform: scale(1);
+      opacity: 1;
     }
   }
 @keyframes boll2 {
     20% {
       transform: scale(0);
-      opacity: .5;
+      opacity: .2;
     }
 
     100% {
       transform: scale(1);
+      opacity: 1;
     }
   }
 @keyframes boll3 {
     40% {
       transform: scale(0);
-      .5
+      opacity: .2;
     }
 
     100% {
       transform: scale(1);
+      opacity: 1;
     }
   }
