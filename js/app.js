@@ -169,7 +169,22 @@ function handleKeyDown(event) {
   }
 }
 
+let lastScrollPosition = 0;
+const scrollDiv = document.querySelector('.nav_mobile');
 
+window.addEventListener('scroll', () => {
+  const currentScrollPosition = window.pageYOffset;
+
+  if (currentScrollPosition > lastScrollPosition) {
+    // Rolagem para baixo
+    scrollDiv.style.display = 'none';
+  } else {
+    // Rolagem para cima
+    scrollDiv.style.display = 'block';
+  }
+
+  lastScrollPosition = currentScrollPosition;
+});
 
 
 
