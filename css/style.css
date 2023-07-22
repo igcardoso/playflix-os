@@ -501,6 +501,7 @@ main header img {
     background: transparent;
     margin-top: 0;
     width: 100%;
+    background: none;
   }
 
   .nav_mobile .content_button.active {
