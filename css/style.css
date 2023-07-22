@@ -473,7 +473,7 @@ main header img {
     width: calc(100% - 20px);
     justify-content: center;
     align-content: center;
-    background: rgba(28,28,28,0.707);
+    background: rgba(21,21,21,0.787);
     /*
     background: rgba(0,0,0,0.362);
     box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
