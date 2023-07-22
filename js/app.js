@@ -177,10 +177,10 @@ window.addEventListener('scroll', () => {
 
   if (currentScrollPosition > lastScrollPosition) {
     // Rolagem para baixo
-    scrollDiv.style.display = 'none';
+    scrollDiv.style.bottom = '-100%';
   } else {
     // Rolagem para cima
-    scrollDiv.style.display = 'block';
+    scrollDiv.style.bottom = '0';
   }
 
   lastScrollPosition = currentScrollPosition;
