@@ -984,6 +984,7 @@ main header img {
     margin: 5px;
     border-radius: 8em;
     overflow: hidden;
+    opacity: .2;
   }
 
   .spinner div:nth-child(1) {
