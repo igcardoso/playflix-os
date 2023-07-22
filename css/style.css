@@ -358,7 +358,7 @@ main header img {
 
 .nav_mobile .content_button.active {
   padding: 10px;
-  background: #ffffff0d;
+  /*background: #ffffff0d;*/
 }
 
 .nav_mobile .content_button.active div {
