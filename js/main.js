@@ -272,9 +272,9 @@ function showHighlights() {
     $('.owl-carousel:eq(2)'));
   getMoviesForCarousel(API_URL_generes + 'with_genres=10751' + '&page=4',
     $('.owl-carousel:eq(3)'));
-  getMoviesForCarousel(API_URL + '&page=5',
+  getMoviesForCarousel(API_URL_generes + 'with_genres=878' + '&page=5',
     $('.owl-carousel:eq(4)'));
-  getMoviesForCarousel(API_URL + '&page=6',
+  getMoviesForCarousel(API_URL_generes + 'with_genres=53' + '&page=6',
     $('.owl-carousel:eq(5)'));
   getMoviesForCarousel(API_URL + '&page=7',
     $('.owl-carousel:eq(6)'));
