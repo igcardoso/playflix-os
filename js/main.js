@@ -1,6 +1,7 @@
 var API_KEY = 'api_key=1cf50e6248dc270629e802686245c2c8';
 var BASE_URL = 'https://api.themoviedb.org/3';
 var API_URL = BASE_URL + '/discover/movie?sort_by=popularity.desc&' + API_KEY + '&language=pt-BR&page=1';
+var API_URL_generes = BASE_URL + '/discover/movie?sort_by=popularity.desc&' + API_KEY + '&language=pt-BR&';
 var VOTE_AVERAGE = BASE_URL + '/discover/movie?sort_by=vote_average.desc&' + API_KEY + '&language=pt-BR&page=1';
 var ANIMATIONS = BASE_URL + '/discover/movie?sort_by=popularity.desc&' + API_KEY + '&language=pt-BR&with_genres=16&page=1';
 var today = new Date().toISOString().split('T')[0];
@@ -263,13 +264,13 @@ function updateProminence(movies, carousel) {
 
 // Função para mostrar destaques
 function showHighlights() {
-  getMoviesForCarousel(API_URL + '&page=1',
+  getMoviesForCarousel(API_URL_generes + 'with_genres=12' + '&page=1',
     $('.owl-carousel:eq(0)'));
-  getMoviesForCarousel(ANIMATIONS + '&page=1',
+  getMoviesForCarousel(API_URL_generes + 'with_genres=16' + '&page=1',
     $('.owl-carousel:eq(1)'));
-  getMoviesForCarousel(API_URL + '&page=3',
+  getMoviesForCarousel(API_URL_generes + 'with_genres=28' + '&page=3',
     $('.owl-carousel:eq(2)'));
-  getMoviesForCarousel(API_URL + '&page=4',
+  getMoviesForCarousel(API_URL_generes + 'with_genres=10751' + '&page=4',
     $('.owl-carousel:eq(3)'));
   getMoviesForCarousel(API_URL + '&page=5',
     $('.owl-carousel:eq(4)'));
