@@ -1,6 +1,6 @@
 const staticDevCoffee = "playflix";
 const assets = [
-  "/",
+  /*"/",*/
   "/d.apk"
 ];
 
