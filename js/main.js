@@ -123,7 +123,6 @@ function updateCarousel(movies, carousel) {
     if (window.innerWidth > 780) {
       var image = $('<img>').attr('src', IMG_URL + backdrop_path).attr('alt', name);
       item.append(image);
-      // window.location = "https://playflix-os3.netlify.app"
     } else {
       var image = $('<img>').attr('src', IMG_URL + poster_path).attr('alt', name);
       item.append(image);
