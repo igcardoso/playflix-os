@@ -804,8 +804,7 @@ main header img {
 
 @media(min-width: 781px) {
 
-
-  .content_highlights #next_1,
+ .content_highlights #next_1,
   .content_highlights #prev_1 {
     display: none;
   }
