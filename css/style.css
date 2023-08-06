@@ -812,6 +812,150 @@ main header img {
     display: none;
   }
 
+  #destaques_2 {
+    display: none;
+  }
+
+  #destaques_2 {
+    display: none;
+  }
+
+
+  #destaques {
+    width: 100%;
+    height: auto;
+    padding: 0px 0 20px 0;
+    z-index: -1;
+    display: flex;
+    transition-property: transform;
+    box-sizing: content-box;
+    overflow: hidden;
+    scroll-behavior: smooth;
+    transition: all .5s ease;
+    margin: 130px 0 40px 0;
+  }
+
+  #destaques .item::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.264);
+    z-index: -1;
+  }
+
+  #destaques .item:nth-child(1) {
+    margin-left: 5%;
+  }
+
+  #destaques .item {
+    margin-top: 0;
+    margin-left: 0;
+    flex-shrink: 0;
+    width: 80%;
+    height: 140px;
+    text-align: left;
+    position: relative;
+    transition: all 1s ease;
+    overflow: hidden;
+    margin: 0 5% 0 5%;
+    border-radius: 1.2em;
+  }
+
+  #destaques .item i {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 60px;
+    text-align: center;
+    background: rgba(255,255,255,0.122);
+    backdrop-filter: blur(15px);
+    font-size: 12px;
+    padding: 5px;
+    border-radius: 8em;
+    margin-bottom: 10px;
+  }
+
+  #destaques .item img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -3;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  #destaques .item .info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  #destaques .item .date {
+    position: absolute;
+    top: 25px;
+    left: 50px;
+    margin: 10px 0 10px 0;
+    font-size: 12px;
+    text-align: left;
+  }
+
+  #destaques .item h3 {
+    position: absolute;
+    top: 65px;
+    left: 0;
+    padding: 0 30px 0 30px;
+    font-size: 1.3rem;
+  }
+
+  #destaques .item .logo {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    padding: 0 30px 0 30px;
+    width: 100px;
+  }
+
+  #destaques .item .description {
+    padding: 0 20px 10px 20px;
+    display: none;
+  }
+
+  #destaques .item .popularity {
+    z-index: 80;
+    color: #ffffff;
+    font-weight: 600;
+    width: 80px;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    margin: 5px;
+    background: rgb(7,0,30);
+    display: none;
+  }
+
+  #destaques .item .play {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 80;
+    background: linear-gradient(25deg, rgba(229,0,12,0.443), rgba(0,2,248,0.443));
+    webkit-backdrop-filter: blur(30px);
+    backdrop-filter: blur(30px);
+    color: #ffffff;
+    font-weight: 600;
+    width: 100%;
+    height: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    margin: 5px;
+    opacity: 0;
+  }
+
+
   .owl-carousel.hidden {
     opacity: 0;
   }
