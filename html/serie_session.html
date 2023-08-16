@@ -405,7 +405,7 @@
     document.querySelector('.background').src = IMG_URL + filme.backdrop_path
     document.querySelector('.title').innerText = filme.name
     document.querySelector('.vote').innerText = filme.vote_average + "%"
-    document.querySelector('.genere').innerText = filme.genres.map(genero => genero.name).join(', ')
+    document.querySelector('.genere').innerText = filme.genres.map(genero => genero.name).join(' | ')
     document.querySelector('.description').innerText = filme.overview.substring(0, 200) + "..."
 
 
