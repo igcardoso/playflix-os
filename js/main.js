@@ -9,7 +9,7 @@ var API_URL_DESTAQUES = BASE_URL + '/discover/movie?sort_by=popularity.desc&' + 
 
 var IMG_URL = 'https://image.tmdb.org/t/p/w500';
 var IMG_URL_PROMINENCE = 'https://image.tmdb.org/t/p/original';
-var searchURL = BASE_URL + '/search/movie?' + API_KEY + '&language=pt-BR';
+var searchURL = BASE_URL + '/search/multi?' + API_KEY + '&language=pt-BR';
 
 
 const genres = [{
