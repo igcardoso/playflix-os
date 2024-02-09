@@ -2,7 +2,7 @@ var tabs = document.querySelectorAll('.tab-content');
 var tabContent = document.querySelectorAll('.tab-content');
 var stackTabs = document.querySelectorAll('.stack-tab-content');
 
-var appBackButtons = document.querySelectorAll('.back');;
+var appBackButtons = document.querySelectorAll('.back');
 
 function updateHeaderVisibility() {
     const isAnyStackTabActive = Array.from(stackTabs).some(tab =>
