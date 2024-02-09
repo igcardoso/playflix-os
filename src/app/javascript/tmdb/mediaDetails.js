@@ -44,8 +44,6 @@ async function getAllMoviesDetails(filmeId, title, background) {
 	}
 }
 
-
-
 async function mediaIsSeries(serieId) {
 	const detalhesUrl = `${BASE_URL}/tv/${serieId}?${API_KEY}&language=pt-BR`;
 
@@ -687,7 +685,6 @@ function toShare(id) {
 	}
 }
 
-
 async function getMovieTrailerLink(filmeId) {
 	let trailerUrl = `${BASE_url}/movie/${filmeId}/videos?${API_key}&language=pt-BR`;
 
@@ -748,3 +745,11 @@ async function getMovieTrailerLink(filmeId) {
 		console.error('Ocorreu um erro:', error);
 	}
 }
+
+let floatPlay = document.querySelector(`${FilmPageDisplay} .float-btn-play`);
+let options_play = document.querySelector(`${FilmPageDisplay} .options-play`);
+
+floatPlay.addEventListener('click', ()=> {
+  options_play.scrollIntoView({ behavior: 'smooth' });
+});
+
