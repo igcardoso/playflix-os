@@ -320,7 +320,7 @@ nav  .icon {
 }
 
 *:not(:empty) {/* inclui todos o elemento, excluindo apenas os que não tem texto, ou seja peda todos os que tem texto*/
-  /* user-select: none;  */
+  user-select: none; 
   
 }
 
