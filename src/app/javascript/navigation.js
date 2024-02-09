@@ -12,6 +12,8 @@ function updateHeaderVisibility() {
 	const episodeDetails = document.querySelector("#episode-details");
 	const playElement = document.querySelector("#play");
 	const trailerElement = document.querySelector("#trailer");
+	const channelsElement = document.querySelector("#channels");
+	const homeElement = document.querySelector("#home");
 	const navBar = document.querySelector("nav");
 	const header = document.querySelector("header");
 
@@ -23,6 +25,8 @@ function updateHeaderVisibility() {
 		header.classList.add('hidden-display');
 		// header.classList.remove('hidden');
 		navBar.style.display = "flex";
+	} else if (homeElement.classList.contains('active')) {
+		document.querySelector('#channels .media iframe').src = "";
 	} else if (searchElement.classList.contains('active')) {
 		// header.classList.add('hidden');
 		header.classList.add('hidden-display');
@@ -40,6 +44,10 @@ function updateHeaderVisibility() {
 		document.querySelector('#play .media').innerHTML = "";
 		document.querySelector('#trailer .media').innerHTML = "";
 	} else if (playElement.classList.contains('active')) {
+		// header.classList.remove('hidden');
+		header.classList.add('hidden-display');
+		navBar.style.display = "none";
+	} else if (channelsElement.classList.contains('active')) {
 		// header.classList.remove('hidden');
 		header.classList.add('hidden-display');
 		navBar.style.display = "none";
