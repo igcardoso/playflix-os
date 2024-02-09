@@ -75,8 +75,8 @@ let channelData = [
 channelData.forEach((channel, index) => {
     // Criar a div do canal
     let channelDiv = document.createElement("div");
-    channelDiv.classList.add("channel", "option-bar");
-    channelDiv.setAttribute("data-page", "channels");
+    channelDiv.classList.add("channel");
+    // channelDiv.setAttribute("data-page", "channels");
 
     // Criar a imagem do poster do canal
     // let posterImg = document.createElement('img');
