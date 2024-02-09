@@ -1,13 +1,55 @@
 {
-  "name": "Prime TV+",
-  "short_name": "Prime Tv+",
+  "name": "Infinix OS",
+  "short_name": "Finix OS",
   "start_url": "index.html",
   "display": "standalone",
-  "background_color": "#000000",
-  "theme_color": "#000000",
+  "background_color": "EDEFEE",
+  "theme_color": "#dedede",
   "orientation": "portrait-primary",
-  "scope": "https://primeTv.netlify.app/",
+  "scope": "https://infinex-os.netlify.app/",
   "prefer_related_applications": false,
+  "shortcuts": [
+  {
+    "name": "Mooodle",
+    "short_name": "Mooodle",
+    "url": "https://ava.ifba.edu.br/course/view.php?id=4940",
+    "description": "Abra os sites importantes",
+    "icons": [
+    {
+      "src": "/images/icons/icon-72x72.png",
+      "type": "image/png",
+      "sizes": "72x72",
+      "purpose": "any"
+    }
+    ]
+  },
+  {
+    "name": "Suap",
+    "short_name": "Suap",
+    "url": "https://suap.ifba.edu.br/accounts/login/?next=/",
+    "icons": [
+    {
+      "src": "/images/icons/icon-72x72.png",
+      "type": "image/png",
+      "sizes": "72x72",
+      "purpose": "any"
+    }
+    ]
+  },
+  {
+    "name": "Classroom",
+    "short_name": "Classroom",
+    "url": "https://classroom.google.com/u/0/",
+    "icons": [
+    {
+      "src": "/images/icons/icon-72x72.png",
+      "type": "image/png",
+      "sizes": "72x72",
+      "purpose": "any"
+    }
+    ]
+  }
+],
   "icons": [
     {
       "src": "/images/icons/icon-72x72.png",
