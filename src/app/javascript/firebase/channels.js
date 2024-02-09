@@ -9,7 +9,7 @@ channel_1.addEventListener('click', ()=> {
   iframe_rendering_channels.setAttribute('src', channel_link);
 });
 channel_2.addEventListener('click', ()=> {
-  let channel_link = "https://playertv.net/tv.php?c=tcPremium";
+  let channel_link = "https://playertv.net/tv.php?c=tc-premium";
   
   iframe_rendering_channels.setAttribute('src', channel_link);
 });
