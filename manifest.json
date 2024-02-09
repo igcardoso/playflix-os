@@ -8,6 +8,7 @@
   "orientation": "portrait-primary",
   "scope": "https://playflix-os.netlify.app/",
   "prefer_related_applications": false,
+  "id": "1e42bc7a-768d-461a-86d7-7dd3d2da9032",
   "icons": [
     {
       "src": "/accets/app-icons/icon-72x72.png",
@@ -65,7 +66,6 @@
     "standalone",
     "window-controls-overlay"
   ],
-  "id": "1e42bc7a-768d-461a-86d7-7dd3d2da9032",
   "categories": [
     "education",
     "lifestyle"
