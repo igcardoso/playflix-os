@@ -104,7 +104,8 @@ function showTab(tabId) {
 
     selectedTab.classList.add("active");
     contentFilmPage();
-
+    updateHeaderVisibility();
+    
     const markerNavBottom = document.querySelectorAll(".option-nav-bottom");
 
     if (tabId != "play" && tabId != "episode-details" && tabId != "trailer" && tabId != "channels" && tabId != "film-page") {
@@ -181,7 +182,6 @@ function handleNavClick(event) {
         setTimeout(function () {
             // Stack tab
             showTab(selectedPage);
-            updateHeaderVisibility();
             window.history.pushState(
                 {
                     page: selectedPage
@@ -194,7 +194,6 @@ function handleNavClick(event) {
         setTimeout(function () {
             // Bottom tab
             showTab(selectedPage);
-            updateHeaderVisibility();
             window.history.pushState(
                 {
                     page: selectedPage
@@ -210,7 +209,6 @@ function handleNavClick(event) {
 window.addEventListener("popstate", function (event) {
     const page = event.state ? event.state.page : "home";
     showTab(page);
-    updateHeaderVisibility();
 });
 
 function appBackButtonsNavigation() {
