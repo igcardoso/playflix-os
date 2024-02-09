@@ -291,7 +291,6 @@ async function getMovieDetails(filmeId, container) {
 			let runtime = document.querySelector(`${container} .runtime`);
 
 			btnPlay.addEventListener('click', (event)=> {
-				handleNavClick(event);
 				getAllMoviesDetails(data.id, data.title || data.name, data.backgrop_path);
 			});
 
