@@ -11,13 +11,13 @@
     "id": "1e42bc7a-768d-461a-86d7-7dd3d2da9032",
     "launch_handler": {
         "ios": {
-            "url": "/index.html"
+            "url": "https://playflix-os.netlify.app/index.html"
         },
         "android": {
-            "url": "/index.html"
+            "url": "https://playflix-os.netlify.app/index.html"
         },
         "windows": {
-            "url": "/desktop.html"
+            "url": "https://playflix-os.netlify.app/desktop.html"
         }
     },
     "icons": [
