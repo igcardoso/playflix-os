@@ -236,14 +236,7 @@ async function mediaIsSeries(serieId) {
 								}, 200);
 							}
 							const episodeNumber = index + 1;
-							// alert(`oiii ${season.season_number} ${episodeNumber}`);
-							// contentIframe.innerHTML = '';
-							// 							const iframe = document.createElement('iframe');
-							// 							iframe.src = `https://superembeds.com/embed2/${data.id}-${season.season_number}-${episodeNumber}`;
-							//
-							// 							contentIframe.appendChild(iframe);
-							//
-
+							
 							Ep_episode_name.innerText = `Episódio ${episodeNumber}`;
 							EP_title.innerText = `${episode.episodeName}`;
 							console.log(episode.episodeAirDate.slice(0, 2))
