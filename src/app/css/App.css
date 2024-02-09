@@ -165,24 +165,36 @@ nav  .icon {
 	transform: scale(1.1);
 }
 
-.slide .card .poster-channel {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-}
-
-.slide .card .logo {
-  position: absolute;
-  bottom: 0;
+.slide .channel .logo {
   width: 100%;
-  height: 6em;
+  height: 7em;
   z-index: 20;
   object-fit: cover;
-  border-top: 4px solid #f6f6f650;
+  border-radius: 1.2em;
 }
+
+.slide .channel p {
+  font-family: 'Montserrat', sans-serif; 
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,"Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  z-index: 22;
+  font-weight: 500;
+  padding: .3em;
+  background: #f6f6f613;
+  border-radius: 8em;
+}
+
+.slide .channel {
+  position: relative;
+  min-width: 7em;
+  height: auto;
+  /* background: #f6f6f612; */
+  margin: .3em;
+  overflow: hidden;
+  padding-bottom: 1em;
+  text-align: center;
+  scroll-behavior: smooth;
+}
+
 
 .slim-slide .card:after {
 	content: '';
