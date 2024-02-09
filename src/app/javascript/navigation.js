@@ -57,8 +57,8 @@ function updateHeaderVisibility() {
         navBar.style.display = "none";
     } else if (homeElement.classList.contains("active")) {
         // header.classList.remove('hidden');
-        header.classList.add("hidden-display");
-        navBar.style.display = "none";
+        header.classList.remove("hidden-display");
+        navBar.style.display = "flex";
         document.querySelector("#channels .media iframe").src = "";
     } else {
         navBar.style.display = "flex";
