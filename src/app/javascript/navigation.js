@@ -27,6 +27,7 @@ function updateHeaderVisibility() {
 		navBar.style.display = "flex";
 	} else if (homeElement.classList.contains('active')) {
 		document.querySelector('#channels .media iframe').src = "";
+		navBar.style.display = "flex";
 	} else if (searchElement.classList.contains('active')) {
 		// header.classList.add('hidden');
 		header.classList.add('hidden-display');
