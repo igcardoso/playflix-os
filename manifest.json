@@ -9,6 +9,7 @@
     "scope": "https://playflix-os.netlify.app/",
     "prefer_related_applications": false,
     "id": "1e42bc7a-768d-461a-86d7-7dd3d2da9032",
+    "supports_edge_panel": false,
     "widgets": {
         "my_widget": {
             "name": "Meu Widget",
