@@ -146,6 +146,7 @@ function displayPageName(event) {
 		}
 		displayPageName();
 		functionsRenderPages();
+		updateHeaderVisibility();
 	}
 
 	// Função para lidar com cliques nos botões de navegação
@@ -173,7 +174,6 @@ function displayPageName(event) {
 			setTimeout(function() {
 				// Stack tab
 				showTab(selectedPage);
-				updateHeaderVisibility();
 				window.history.pushState({
 					page: selectedPage
 				}, null, `#${selectedPage}`);
@@ -182,7 +182,6 @@ function displayPageName(event) {
 			setTimeout(function() {
 				// Bottom tab
 				showTab(selectedPage);
-				updateHeaderVisibility();
 				window.history.pushState({
 					page: selectedPage
 				}, null, `#${selectedPage}`);
@@ -194,13 +193,11 @@ function displayPageName(event) {
 	window.addEventListener('popstate', function (event) {
 		const page = event.state ? event.state.page: 'home';
 		showTab(page);
-		updateHeaderVisibility();
 	});
 
 
 	function appBackButtonsNavigation() {
 		history.back();
-		updateHeaderVisibility();
 	}
 
 	appBackButtons.forEach(btn => {
