@@ -9,10 +9,15 @@
     "scope": "https://playflix-os.netlify.app/",
     "prefer_related_applications": false,
     "id": "1e42bc7a-768d-461a-86d7-7dd3d2da9032",
-    "scope_extensions": [
-      "notifications",
-      "offline_storage"
-     ],
+    "widgets": {
+        "my_widget": {
+            "name": "Meu Widget",
+            "description": "Um widget útil para minha PWA",
+            "icon": "icons/widget-icon.png",
+            "url": "/widget.html"
+        }
+    },
+    "scope_extensions": ["notifications", "offline_storage"],
     "launch_handler": {
         "ios": {
             "url": "https://playflix-os.netlify.app/index.html"
