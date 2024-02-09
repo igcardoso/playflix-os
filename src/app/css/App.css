@@ -156,13 +156,30 @@ nav  .icon {
 	position: relative;
 }
 
-.slide .card img {
+.slide .card .img {
 	position: absolute;
 	top: 0;
 	left: 0;
 	width: 100%;
 	height: 100%;
 	transform: scale(1.1);
+}
+
+.slide .card .poster-channel {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.slide .card .logo {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  z-index: 20;
+  opacity: .8;
 }
 
 .slim-slide .card:after {
@@ -1497,12 +1514,14 @@ nav  .icon {
 	overflow: hidden;
 }
 
-#play .media {
+#play .media,
+#channels .media {
 	width: 100%;
 	height: 100vh;
 }
 
-#play .media iframe {
+#play .media iframe,
+#channels .media iframe {
 	width: 100%;
 	height: 100%;
 	border: none;
