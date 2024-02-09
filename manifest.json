@@ -20,6 +20,17 @@
             "url": "https://playflix-os.netlify.app/desktop.html"
         }
     },
+    "protocol_handlers": [
+        {
+            "url": "/filme?id=%s",
+            "protocol": "tmdb"
+        },
+        {
+            "url": "/trailer?id=%s",
+            "protocol": "youtube"
+        }
+    ],
+
     "icons": [
         {
             "src": "/accets/app-icons/icon-72x72.png",
