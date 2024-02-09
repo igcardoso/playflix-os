@@ -5,63 +5,66 @@ var stackTabs = document.querySelectorAll('.stack-tab-content');
 var appBackButtons = document.querySelectorAll('.back');;
 
 function updateHeaderVisibility() {
-	const isAnyStackTabActive = Array.from(stackTabs).some(tab => tab.classList.contains('active'));
-	const cogElement = document.querySelector("#profile");
-	const searchElement = document.querySelector("#search");
-	const filmPageElement = document.querySelector("#film-page");
-	const episodeDetails = document.querySelector("#episode-details");
-	const playElement = document.querySelector("#play");
-	const trailerElement = document.querySelector("#trailer");
-	const channelsElement = document.querySelector("#channels");
-	const homeElement = document.querySelector("#home");
-	const navBar = document.querySelector("nav");
-	const header = document.querySelector("header");
+    const isAnyStackTabActive = Array.from(stackTabs).some(tab =>
+        tab.classList.contains("active")
+    );
+    const cogElement = document.querySelector("#profile");
+    const searchElement = document.querySelector("#search");
+    const filmPageElement = document.querySelector("#film-page");
+    const episodeDetails = document.querySelector("#episode-details");
+    const playElement = document.querySelector("#play");
+    const trailerElement = document.querySelector("#trailer");
+    const channelsElement = document.querySelector("#channels");
+    const homeElement = document.querySelector("#home");
+    const navBar = document.querySelector("nav");
+    const header = document.querySelector("header");
 
-	if (isAnyStackTabActive) {
-		// header.classList.add('hidden');
-		header.classList.add('hidden-display');
-		navBar.style.display = "flex";
-	} else if (cogElement.classList.contains('active')) {
-		header.classList.add('hidden-display');
-		// header.classList.remove('hidden');
-		navBar.style.display = "flex";
-	} else if (homeElement.classList.contains('active')) {
-		document.querySelector('#channels .media iframe').src = "";
-	} else if (searchElement.classList.contains('active')) {
-		// header.classList.add('hidden');
-		header.classList.add('hidden-display');
-		navBar.style.display = "flex";
-	} else if (filmPageElement.classList.contains('active')) {
-		// header.classList.remove('hidden');
-		header.classList.add('hidden-display');
-		navBar.style.display = "flex";
-		document.querySelector('#play .media').innerHTML = "";
-		document.querySelector('#trailer .media').innerHTML = "";
-	} else if (episodeDetails.classList.contains('active')) {
-		// header.classList.remove('hidden');
-		header.classList.add('hidden-display');
-		navBar.style.display = "flex";
-		document.querySelector('#play .media').innerHTML = "";
-		document.querySelector('#trailer .media').innerHTML = "";
-	} else if (playElement.classList.contains('active')) {
-		// header.classList.remove('hidden');
-		header.classList.add('hidden-display');
-		navBar.style.display = "none";
-	} else if (channelsElement.classList.contains('active')) {
-		// header.classList.remove('hidden');
-		header.classList.add('hidden-display');
-		navBar.style.display = "none";
-	} else if (trailerElement.classList.contains('active')) {
-		// header.classList.remove('hidden');
-		header.classList.add('hidden-display');
-		navBar.style.display = "none";
-	} else {
-		navBar.style.display = "flex";
-		// header.classList.remove('hidden');
-		header.classList.remove('hidden-display');
-	}
-
-
+    if (isAnyStackTabActive) {
+        // header.classList.add('hidden');
+        header.classList.add("hidden-display");
+        navBar.style.display = "flex";
+    } else if (cogElement.classList.contains("active")) {
+        header.classList.add("hidden-display");
+        // header.classList.remove('hidden');
+        navBar.style.display = "flex";
+    } else if (searchElement.classList.contains("active")) {
+        // header.classList.add('hidden');
+        header.classList.add("hidden-display");
+        navBar.style.display = "flex";
+    } else if (filmPageElement.classList.contains("active")) {
+        // header.classList.remove('hidden');
+        header.classList.add("hidden-display");
+        navBar.style.display = "flex";
+        document.querySelector("#play .media").innerHTML = "";
+        document.querySelector("#trailer .media").innerHTML = "";
+    } else if (episodeDetails.classList.contains("active")) {
+        // header.classList.remove('hidden');
+        header.classList.add("hidden-display");
+        navBar.style.display = "flex";
+        document.querySelector("#play .media").innerHTML = "";
+        document.querySelector("#trailer .media").innerHTML = "";
+    } else if (playElement.classList.contains("active")) {
+        // header.classList.remove('hidden');
+        header.classList.add("hidden-display");
+        navBar.style.display = "none";
+    } else if (channelsElement.classList.contains("active")) {
+        // header.classList.remove('hidden');
+        header.classList.add("hidden-display");
+        navBar.style.display = "none";
+    } else if (trailerElement.classList.contains("active")) {
+        // header.classList.remove('hidden');
+        header.classList.add("hidden-display");
+        navBar.style.display = "none";
+    } else if (homeElement.classList.contains("active")) {
+        // header.classList.remove('hidden');
+        header.classList.remove("hidden-display");
+        navBar.style.display = "flex";
+        document.querySelector("#channels .media iframe").src = "";
+    } else {
+        navBar.style.display = "flex";
+        header.classList.remove("hidden-display");
+        document.querySelector("#channels .media iframe").src = "";
+    }
 }
 
 function capitalizeFirstLetter(palavra) {
