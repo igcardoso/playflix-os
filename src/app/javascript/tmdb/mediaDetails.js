@@ -673,7 +673,7 @@ async function mediaIsMovie(movieId) {
 }
 
 function toShare(id) {
-	const urlToShare = 'http://localhost:8158/Index.html?share=' + id;
+	const urlToShare = 'https://playflix-os.netlify.app/index.html?share=' + id;
 
 	if (navigator.share) {
 		navigator.share({
