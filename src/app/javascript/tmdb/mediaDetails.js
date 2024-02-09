@@ -497,7 +497,7 @@ async function mediaIsMovie(movieId) {
 			let Play_3 = document.querySelector(`${FilmPageDisplay} .options-play .option-3`);
 			let Play_4 = document.querySelector(`${FilmPageDisplay} .options-play .option-4`);
 
-			let contentIframe = document.querySelector('#play .media iframe');
+			let contentIframe = document.querySelector('#play .media');
 			contentActorsActresses.innerHTML = '';
 
 			document.querySelector(`${FilmPageDisplay} .share`).addEventListener('click', ()=> {
@@ -587,37 +587,36 @@ async function mediaIsMovie(movieId) {
 
 
 			Play_1.addEventListener("click", ()=> {
-				// contentIframe.innerHTML = '';
-				// let iframe = document.createElement('iframe');
-				// iframe.src = `https://embedder.net/e/${data.imdb_id}`;
-				contentIframe.src = `https://embedder.net/e/${data.imdb_id}`;
+				contentIframe.innerHTML = '';
+				let iframe = document.createElement('iframe');
+				iframe.src = `https://embedder.net/e/${data.imdb_id}`;
 
-				// contentIframe.appendChild(iframe);
+				contentIframe.appendChild(iframe);
 			});
 			Play_2.addEventListener("click", ()=> {
-				// contentIframe.innerHTML = '';
-				// let iframe = document.createElement('iframe');
-				// iframe.src = `https://v2.vidsrc.me/embed/${data.imdb_id}`;
-				contentIframe.src = `https://v2.vidsrc.me/embed/${data.imdb_id}`;
 
-				//.contentIframe.appendChild(iframe);
+				contentIframe.innerHTML = '';
+				let iframe = document.createElement('iframe');
+				iframe.src = `https://v2.vidsrc.me/embed/${data.imdb_id}`;
+
+				contentIframe.appendChild(iframe);
 			});
 			Play_3.addEventListener("click", ()=> {
-				// contentIframe.innerHTML = '';
-				//.let iframe = document.createElement('iframe');
-				// iframe.src = `https://superembeds.com/embed2/${data.imdb_id}`;
-				contentIframe.src = `https://superembeds.com/embed2/${data.imdb_id}`;
 
-				//.contentIframe.appendChild(iframe);
+				contentIframe.innerHTML = '';
+				let iframe = document.createElement('iframe');
+				iframe.src = `https://superembeds.com/embed2/${data.imdb_id}`;
+
+				contentIframe.appendChild(iframe);
 
 			});
 			Play_4.addEventListener("click", ()=> {
-					// contentIframe.innerHTML = '';
-					// const iframe = document.createElement('iframe');
-					// iframe.src = `https://multiembed.mov/?video_id=${data.imdb_id}`;
-					contentIframe.src = `https://multiembed.mov/?video_id=${data.imdb_id}`;
 
-					// contentIframe.appendChild(iframe);
+					contentIframe.innerHTML = '';
+					const iframe = document.createElement('iframe');
+					iframe.src = `https://multiembed.mov/?video_id=${data.imdb_id}`;
+
+					contentIframe.appendChild(iframe);
 				});
 
 			console.log(data)
