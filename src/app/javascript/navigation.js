@@ -63,6 +63,7 @@ function updateHeaderVisibility() {
     } else {
         navBar.style.display = "flex";
         header.classList.remove("hidden-display");
+        document.querySelector("#channels .media iframe").src = "";
     }
 }
 
