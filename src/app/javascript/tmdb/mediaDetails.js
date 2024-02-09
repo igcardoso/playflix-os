@@ -236,7 +236,14 @@ async function mediaIsSeries(serieId) {
 								}, 200);
 							}
 							const episodeNumber = index + 1;
-							
+							// alert(`oiii ${season.season_number} ${episodeNumber}`);
+							// contentIframe.innerHTML = '';
+							// 							const iframe = document.createElement('iframe');
+							// 							iframe.src = `https://superembeds.com/embed2/${data.id}-${season.season_number}-${episodeNumber}`;
+							//
+							// 							contentIframe.appendChild(iframe);
+							//
+
 							Ep_episode_name.innerText = `Episódio ${episodeNumber}`;
 							EP_title.innerText = `${episode.episodeName}`;
 							console.log(episode.episodeAirDate.slice(0, 2))
@@ -293,32 +300,29 @@ async function mediaIsSeries(serieId) {
 								contentIframe.innerHTML = '';
 								const iframe = document.createElement('iframe');
 								iframe.src = `https://embedder.net/e/${data.id}/${season.season_number}/${episodeNumber}`;
+								iframe.setAttribute('allowfullscreen', '');
 								contentIframe.appendChild(iframe);
 							});
 							play_2.addEventListener("click", ()=> {
-
 								contentIframe.innerHTML = '';
 								const iframe = document.createElement('iframe');
 								iframe.src = `https://v2.vidsrc.me/embed/${data.id}/${season.season_number}/${episodeNumber}-#1da1f2`;
-
+								iframe.setAttribute('allowfullscreen', '');
 								contentIframe.appendChild(iframe);
 							});
 							play_3.addEventListener("click", ()=> {
-
 								contentIframe.innerHTML = '';
 								const iframe = document.createElement('iframe');
 								iframe.src = `https://superembeds.com/embed2/${data.id}-${season.season_number}-${episodeNumber}`;
-
+								iframe.setAttribute('allowfullscreen', '');
 								contentIframe.appendChild(iframe);
 
 							});
-							play_4.addEventListener("click",
-								()=> {
-
+							play_4.addEventListener("click", ()=> {
 									contentIframe.innerHTML = '';
 									const iframe = document.createElement('iframe');
 									iframe.src = `https://multiembed.mov/?video_id=${data.imdb_id}`;
-
+									iframe.setAttribute('allowfullscreen', '');
 									contentIframe.appendChild(iframe);
 								});
 
@@ -583,42 +587,29 @@ async function mediaIsMovie(movieId) {
 				contentIframe.innerHTML = '';
 				let iframe = document.createElement('iframe');
 				iframe.src = `https://embedder.net/e/${data.imdb_id}`;
-
+				iframe.setAttribute('allowfullscreen', '');
 				contentIframe.appendChild(iframe);
 			});
 			Play_2.addEventListener("click", ()=> {
-
 				contentIframe.innerHTML = '';
 				let iframe = document.createElement('iframe');
 				iframe.src = `https://v2.vidsrc.me/embed/${data.imdb_id}`;
-
+				iframe.setAttribute('allowfullscreen', '');
 				contentIframe.appendChild(iframe);
 			});
 			Play_3.addEventListener("click", ()=> {
-
 				contentIframe.innerHTML = '';
 				let iframe = document.createElement('iframe');
 				iframe.src = `https://superembeds.com/embed2/${data.imdb_id}`;
-
+				iframe.setAttribute('allowfullscreen', '');
 				contentIframe.appendChild(iframe);
-
-				// if (iframe) {
-				// 					var linksNoIframe = iframe.contentDocument.getElementsByTagName('a');
-				//
-				// 					for (var i = 0; i < linksNoIframe.length; i++) {
-				// 						var link = linksNoIframe[i];
-				// 						link.removeAttribute('target');
-				// 					}
-				// 				}
-
 			});
 			Play_4.addEventListener("click",
 				()=> {
-
 					contentIframe.innerHTML = '';
 					const iframe = document.createElement('iframe');
 					iframe.src = `https://multiembed.mov/?video_id=${data.imdb_id}`;
-
+					iframe.setAttribute('allowfullscreen', '');
 					contentIframe.appendChild(iframe);
 				});
 
@@ -666,7 +657,7 @@ async function mediaIsMovie(movieId) {
 }
 
 function toShare(id) {
-	const urlToShare = 'https://playflix-os.netlify.app/index.html?share=' + id;
+	const urlToShare = 'http://localhost:8158/Index.html?share=' + id;
 
 	if (navigator.share) {
 		navigator.share({
@@ -710,7 +701,7 @@ async function getMovieTrailerLink(filmeId) {
 			let trailerKey = data.results[0].key;
 			let base = data.results[0];
 			let trailerLink = `https://www.youtube.com/embed/${trailerKey}?autoplay=1&hl=${base.iso_639_1}-${base.iso_3166_1}`;
-			var buttonTrailer = document.querySelector(`${FilmPageDisplay} .trailer`);
+			let buttonTrailer = document.querySelector(`${FilmPageDisplay} .trailer`);
 			console.log(trailerLink)
 			console.log(data.results[0]);
 
@@ -730,7 +721,8 @@ async function getMovieTrailerLink(filmeId) {
 				document.querySelector(`${FilmPageDisplay} .label-btn-trailer`).innerText = "Assistir ao Trailer Oficial";
 			}
 		} else {
-			buttonTrailer.addEventListener('click', ()=> {
+		  button_trailer = document.querySelector(`${FilmPageDisplay} .trailer`);
+			button_trailer.addEventListener('click', ()=> {
 
 				let type = 'alert';
 				let titleAlert = 'Opa! Algo deu errado';
