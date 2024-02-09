@@ -609,18 +609,8 @@ async function mediaIsMovie(movieId) {
 
 				contentIframe.appendChild(iframe);
 
-				// if (iframe) {
-				// 					var linksNoIframe = iframe.contentDocument.getElementsByTagName('a');
-				//
-				// 					for (var i = 0; i < linksNoIframe.length; i++) {
-				// 						var link = linksNoIframe[i];
-				// 						link.removeAttribute('target');
-				// 					}
-				// 				}
-
 			});
-			Play_4.addEventListener("click",
-				()=> {
+			Play_4.addEventListener("click", ()=> {
 
 					contentIframe.innerHTML = '';
 					const iframe = document.createElement('iframe');
