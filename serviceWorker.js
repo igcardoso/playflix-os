@@ -1,3 +1,5 @@
+importScripts('https://storage.googleapis.com/workbox-cdn/releases/5.1.2/workbox-sw.js');
+
 const staticOnuSite = "onu-site-v1";
 const assets =  [
   "/",
@@ -18,9 +20,30 @@ self.addEventListener("install", installEvent => {
 });
 
 self.addEventListener("fetch", fetchEvent => {
-  fetchEvent.respondWith(
-    caches.match(fetchEvent.request).then(res => {
-      return res || fetch(fetchEvent.request);
-    })
-  );
+  const { request } = fetchEvent;
+
+  // Cache first strategy for static assets
+  if (request.mode === 'navigate' || (request.method === 'GET' && request.headers.get('accept').includes('text/html'))) {
+    fetchEvent.respondWith(
+      caches.match(request).then(response => {
+        return response || fetch(request).then(fetchResponse => {
+          return caches.open(staticOnuSite).then(cache => {
+            cache.put(request, fetchResponse.clone());
+            return fetchResponse;
+          });
+        });
+      }).catch(error => {
+        return caches.match('/offline.html');
+      })
+    );
+  } else {
+    // Network first strategy for other requests
+    fetchEvent.respondWith(
+      fetch(request).catch(() => {
+        return caches.match(request).then(response => {
+          return response || new Response(null, { status: 404 });
+        });
+      })
+    );
+  }
 });
