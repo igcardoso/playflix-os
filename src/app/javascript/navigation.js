@@ -107,7 +107,7 @@ function showTab(tabId) {
 
     const markerNavBottom = document.querySelectorAll(".option-nav-bottom");
 
-    if (tabId != "play" && tabId != "episode-details" && tabId != "trailer" && tabId != "channels") {
+    if (tabId != "play" && tabId != "episode-details" && tabId != "trailer" && tabId != "channels" && tabId != "film-page") {
         markerNavBottom.forEach(option => {
             markerNavBottom.forEach(all => all.classList.remove("active"));
             document
@@ -116,10 +116,7 @@ function showTab(tabId) {
         });
     }
 
-    if (
-        tabId != "profile" &&
-        !selectedTab.classList.contains("stack-tab-content") &&
-        !selectedTab.classList.contains("floating-element")
+    if (tabId != "profile" && !selectedTab.classList.contains("stack-tab-content") && !selectedTab.classList.contains("floating-element")
     ) {
         let pageAreaWithScroll = document.querySelector(`#${tabId} .scroll`);
         let header = document.querySelector("header");
