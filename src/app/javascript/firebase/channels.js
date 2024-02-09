@@ -75,8 +75,8 @@ let channelData = [
 channelData.forEach((channel, index) => {
     // Criar a div do canal
     let channelDiv = document.createElement("div");
-    channelDiv.classList.add("channel"/*, "option-bar"*/);
-    // channelDiv.setAttribute("data-page", "channels");
+    channelDiv.classList.add("channel", "option-bar");
+    channelDiv.setAttribute("data-page", "channels");
 
     // Criar a imagem do poster do canal
     // let posterImg = document.createElement('img');
@@ -102,35 +102,6 @@ channelData.forEach((channel, index) => {
 
     // Adicionar event listener para mudar o canal ao clicar
     channelDiv.addEventListener("click", () => {
-        let selectedplay = "channels";
-
-        if (selectedplay === "profile") {
-            setTimeout(function () {
-                // Stack tab
-                showTab(selectedplay);
-                updateHeaderVisibility();
-                window.history.pushState(
-                    {
-                        page: selectedplay
-                    },
-                    null,
-                    `#${selectedplay}`
-                );
-            }, 200);
-        } else {
-            setTimeout(function () {
-                // Bottom tab
-                showTab(selectedplay);
-                updateHeaderVisibility();
-                window.history.pushState(
-                    {
-                        page: selectedplay
-                    },
-                    null,
-                    `#${selectedplay}`
-                );
-            }, 200);
-        }
         iframe_rendering_channels.setAttribute("src", channel.link);
     });
 
