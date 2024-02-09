@@ -58,7 +58,7 @@ function updateHeaderVisibility() {
 		navBar.style.display = "none";
 	} else {
 		navBar.style.display = "flex";
-		header.classList.remove('hidden');
+		// header.classList.remove('hidden');
 		header.classList.remove('hidden-display');
 	}
 
