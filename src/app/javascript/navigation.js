@@ -60,7 +60,6 @@ function updateHeaderVisibility() {
         header.classList.add("hidden-display");
         navBar.style.display = "none";
         document.querySelector("#channels .media iframe").src = "";
-        
     } else {
         navBar.style.display = "flex";
         header.classList.remove("hidden-display");
