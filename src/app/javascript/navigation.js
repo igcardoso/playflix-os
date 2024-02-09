@@ -101,7 +101,7 @@ function showTab(tabId) {
 
     const markerNavBottom = document.querySelectorAll(".option-nav-bottom");
 
-    if (tabId != "play" && tabId != "episode-details") {
+    if (tabId != "play" && tabId != "episode-details" && tabId != "trailer" && tabId != "channels") {
         markerNavBottom.forEach(option => {
             markerNavBottom.forEach(all => all.classList.remove("active"));
             document
