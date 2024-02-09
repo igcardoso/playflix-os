@@ -497,7 +497,7 @@ async function mediaIsMovie(movieId) {
 			let Play_3 = document.querySelector(`${FilmPageDisplay} .options-play .option-3`);
 			let Play_4 = document.querySelector(`${FilmPageDisplay} .options-play .option-4`);
 
-			let contentIframe = document.querySelector('#play .media');
+			let contentIframe = document.querySelector('#play .media iframe');
 			contentActorsActresses.innerHTML = '';
 
 			document.querySelector(`${FilmPageDisplay} .share`).addEventListener('click', ()=> {
