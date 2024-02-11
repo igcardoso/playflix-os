@@ -127,7 +127,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		})
 	}
 	
-	
+	underMaintenance();
 	
 	function underMaintenance() {
 		let type = 'alert';
