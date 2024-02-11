@@ -109,7 +109,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	}
 
 	function profileSelectorHeader() {
-		let current = 'accets/default_profile_photo/fp_2.jpg';
+		let current = 'accets/default_profile_photo/fp_13.jpg';
 		// let current = 'accets/default_profile_photo/fp_4.jpg';
 		// let current = 'accets/default_profile_photo/fp_8.jpg';
 		// let current = 'accets/default_profile_photo/fp_5.jpg';
