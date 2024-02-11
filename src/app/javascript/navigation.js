@@ -193,6 +193,10 @@ function displayPageName(event) {
 	window.addEventListener('popstate', function (event) {
 		const page = event.state ? event.state.page: 'home';
 		showTab(page);
+		let current_ = window.history.state ? window.history.state.page: 'home';
+		if (current_ == "home") {
+		  history.back();
+		}
 	});
 
 
