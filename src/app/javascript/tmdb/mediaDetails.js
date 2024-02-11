@@ -434,7 +434,7 @@ async function mediaIsSeries(serieId) {
 					actorName.innerText = actor.name;
 					actorsElement.appendChild(actorName);
 
-					if (! (actor.profile_path == null)) {
+					if (! (actor.name == null || actor.name = "")) {
 						contentActorsActresses.appendChild(actorsElement);
 					}
 
