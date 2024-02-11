@@ -434,7 +434,7 @@ async function mediaIsSeries(serieId) {
 					actorName.innerText = actor.name;
 					actorsElement.appendChild(actorName);
 
-  					if (! (actor.name == null || actor.name = "")) {
+  					if (! (actor.name = "")) {
 						contentActorsActresses.appendChild(actorsElement);
 					}
 
@@ -657,7 +657,7 @@ async function mediaIsMovie(movieId) {
 					actorName.innerText = actor.name;
 					actorsElement.appendChild(actorName);
 
-					if (! (actor.name == null || actor.name = "")) {
+					if (! (actor.name = "")) {
 						contentActorsActresses.appendChild(actorsElement);
 					}
 
