@@ -1286,6 +1286,10 @@ nav  .icon {
 	border: 4px solid #f6f6f621;
 }
 
+#film-page .actors-actresses .actors img.no-cast {
+  opacity: .4;
+}
+
 #film-page .actors-actresses .actors .name {
   z-index: 10;
   font-size: .7em;
