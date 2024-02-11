@@ -407,14 +407,26 @@ async function mediaIsSeries(serieId) {
 			fetch(castUrl)
 			.then(res => res.json())
 			.then(castData => {
-				// Log the name and photo URL of each actor
+			  if (castData.cast.length < 1) {
+			    document.querySelector(`${FilmPageDisplay} .actors-actresses`).style.display = 'none';
+			    document.querySelector(`${FilmPageDisplay} .cast-title`).style.display = 'none';
+			  } else {
+			    document.querySelector(`${FilmPageDisplay} .actors-actresses`).style.display = 'flex';
+			    document.querySelector(`${FilmPageDisplay} .cast-title`).style.display = 'block';
+			  }
 				castData.cast.forEach(actor => {
 
 					const actorsElement = document.createElement('div');
 					actorsElement.classList.add('actors');
 
 					const actorPhoto = document.createElement('img');
-					actorPhoto.src = IMG_URL + actor.profile_path;
+					if (actor.profile_path == null) {
+					  actorPhoto.src = '../../../../accets/media-actors/no-cast.png';
+					  actorPhoto.classList.add('no-cast');
+					} else {
+					  actorPhoto.src = IMG_URL + actor.profile_path;
+					  actorPhoto.classList.remove('no-cast');
+					}
 					actorsElement.appendChild(actorPhoto);
 
 					const actorName = document.createElement('p');
@@ -618,14 +630,26 @@ async function mediaIsMovie(movieId) {
 			fetch(castUrl)
 			.then(res => res.json())
 			.then(castData => {
-				// Log the name and photo URL of each actor
+				if (castData.cast.length < 1) {
+			    document.querySelector(`${FilmPageDisplay} .actors-actresses`).style.display = 'none';
+			    document.querySelector(`${FilmPageDisplay} .cast-title`).style.display = 'none';
+			  } else {
+			    document.querySelector(`${FilmPageDisplay} .actors-actresses`).style.display = 'flex';
+			    document.querySelector(`${FilmPageDisplay} .cast-title`).style.display = 'block';
+			  }
 				castData.cast.forEach(actor => {
 
 					const actorsElement = document.createElement('div');
 					actorsElement.classList.add('actors');
 
 					const actorPhoto = document.createElement('img');
-					actorPhoto.src = IMG_URL + actor.profile_path;
+					if (actor.profile_path == null) {
+					  actorPhoto.src = '../../../../accets/media-actors/no-cast.png';
+					  actorPhoto.classList.add('no-cast');
+					} else {
+					  actorPhoto.src = IMG_URL + actor.profile_path;
+					  actorPhoto.classList.remove('no-cast');
+					}
 					actorsElement.appendChild(actorPhoto);
 
 					const actorName = document.createElement('p');
