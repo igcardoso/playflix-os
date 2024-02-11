@@ -126,3 +126,24 @@ document.addEventListener('DOMContentLoaded', function () {
 			}
 		})
 	}
+	
+	
+	
+	function underMaintenance() {
+		let type = 'alert';
+		let titleAlert = 'Problemas?';
+		let textAlert = 'Talvez o app apresente falhas,  nosso app está passando por manutenções.';
+
+		document.querySelector('#alert').classList.add('active');
+		document.querySelectorAll('#alert .content').forEach(content => {
+			content.classList.remove('active');
+		});
+		document.querySelector(`#alert .type-${type}`).classList.add('active');
+		document.querySelector(`#alert .type-${type} .top h3`).innerText = titleAlert;
+		document.querySelector(`#alert .type-${type} .top p`).innerText = textAlert;
+
+		document.querySelector(`#alert .type-${type} .yes`).addEventListener('click', ()=> {
+			document.querySelector('#alert').classList.remove('active');
+		})
+
+	}
