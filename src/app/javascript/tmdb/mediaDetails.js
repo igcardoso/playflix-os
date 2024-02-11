@@ -762,7 +762,6 @@ async function getMovieTrailerLink(filmeId) {
 				document.querySelector(`#alert .type-${type} .yes`).addEventListener('click', ()=> {
 					document.querySelector('#alert').classList.remove('active');
 				})
-				console.log('Nenhum vídeo de trailer encontrado para este filme.');
 
 			});
 		}
