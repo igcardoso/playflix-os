@@ -107,7 +107,7 @@ function displayPageName(event) {
 
 		const markerNavBottom = document.querySelectorAll('.option-nav-bottom');
 
-		if (tabId != 'play' && tabId != 'episode-details') {
+		if (tabId != 'play' && tabId != 'episode-details' && tabId != 'film-page' && tabId != 'channels') {
 			markerNavBottom.forEach(option => {
 				markerNavBottom.forEach(all => all.classList.remove('active'));
 				document.querySelector(`[data-page=${tabId}]`).classList.add('active');
