@@ -195,7 +195,7 @@ function displayPageName(event) {
 		showTab(page);
 		let current_ = window.history.state ? window.history.state.page: 'home';
 		if (current_ == "#channels") {
-		  history.back();
+		  alert("click duas vezes")
 		}
 	});
 
