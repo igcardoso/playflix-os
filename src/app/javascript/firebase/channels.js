@@ -90,7 +90,7 @@ let channelData = [
   { link: "https://playertv.net/tv.php?c=d-hh",
     name: "Discovery H&H"
   },
-  { link: "https://embedflix.net/tv/discovery-channel-hd" /* "https://playertv.net/tv.php?c=d-channel"*/,
+  { link: "https://playertv.net/tv.php?c=d-channel",
     name: "Discovery Channel"
   },
   { link: "https://playertv.net/c/wbr.php?id=comedyCentral",
