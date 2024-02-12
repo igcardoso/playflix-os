@@ -55,8 +55,9 @@
   left: auto;
   right: auto;
   margin: auto;
-  opacity: .7;
+  opacity: .4;
   font-weight: 800;
+  font-size: .6em;
 }
 
 #alert {
