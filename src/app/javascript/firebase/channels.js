@@ -138,7 +138,7 @@ channelData.forEach((channel, index) => {
   channelDiv.appendChild(channelName);
 
   // Adicionar event listener para mudar o canal ao clicar
-  channelDiv.addEventListener('click', (event) => {
+  channelDiv.addEventListener('click', () => {
     iframe_rendering_channels.setAttribute('src', channel.link);
   });
 
