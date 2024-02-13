@@ -3,8 +3,8 @@
     "relation": ["delegate_permission/common.handle_all_urls"],
     "target": {
       "namespace": "android_app",
-      "package_name": "xyz.appmaker.nanfny",
-      "sha256_cert_fingerprints": ["9E:D1:74:BC:9E:39:F1:CE:40:59:6C:39:95:DB:44:5A:83:00:78:DF:3A:BD:37:85:27:DA:10:7A:14:17:6E:95"]
+      "package_name": "xyz.primeTV.plus",
+      "sha256_cert_fingerprints": ["FF:6D:E0:81:9E:76:02:4F:CE:7D:29:36:3A:73:B9:38:0F:FE:9A:00:C6:5A:54:EA:80:4D:FB:52:F9:B3:E8:2D"]
     }
   }
 ]
