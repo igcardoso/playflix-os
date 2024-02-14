@@ -15,33 +15,24 @@
     <button type="submit">Login</button>
   </form>
 
-  <p id="loginError" style="color: red; display: none;">Erro ao fazer login.</p>
-
   <script type="module">
-    // Importar as funções necessárias dos SDKs que você precisa
     import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
 
-    // Obter uma referência para o serviço de autenticação do Firebase
     const auth = getAuth();
 
-    // Adicionar um evento de envio ao formulário de login
     document.getElementById('loginForm').addEventListener('submit', async (event) => {
-      event.preventDefault(); // Evitar o comportamento padrão do formulário
+      event.preventDefault();
 
       const email = document.getElementById('email').value;
       const password = document.getElementById('password').value;
 
       try {
-        // Autenticar usuário com e-mail e senha
         await signInWithEmailAndPassword(auth, email, password);
-        // Limpar campos de entrada
         document.getElementById('email').value = '';
         document.getElementById('password').value = '';
-        // Redirecionar ou exibir uma mensagem de sucesso
-        console.log('Usuário logado com sucesso.');
+        alert('Login bem-sucedido!');
       } catch (error) {
-        // Lidar com erros de autenticação
-        document.getElementById('loginError').style.display = 'block';
+        alert('Erro ao fazer login. Verifique suas credenciais.');
         console.error('Erro ao fazer login:', error);
       }
     });
