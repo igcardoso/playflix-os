@@ -1065,6 +1065,7 @@ nav  .icon {
 	display: flex;
 	align-items: center;
 	gap: 1em;
+	background: #ffffff28;
 }
 
 #film-page .float-btn-play {
