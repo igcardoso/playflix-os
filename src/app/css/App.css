@@ -1070,7 +1070,7 @@ nav  .icon {
 #film-page .header .share-and-save .icon,
 #episode-details .header .share-and-save .icon {
 	background: #35322b75;
-	padding: .5em;
+	padding: .2em;
 	border-radius: 8em;
 	width: 1.3em;
 	height: 1.3em;
@@ -1079,7 +1079,7 @@ nav  .icon {
 #episode-details .header .back .icon,
 #film-page .header .back .icon {
   background: #35322b75;
-	padding: .5em;
+	padding: .2em;
 	border-radius: 8em;
 	width: 1.3em;
 	height: 1.3em;
