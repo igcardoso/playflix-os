@@ -1067,6 +1067,13 @@ nav  .icon {
 	gap: 1em;
 }
 
+#film-page .header .share-and-save .icon,
+#episode-details .header .share-and-save .icon {
+	background: #ffffff16;
+	padding: .5em;
+	border-radius: 8em;
+}
+
 #film-page .float-btn-play {
   border-radius: .8em;
   background: none;
