@@ -1076,6 +1076,15 @@ nav  .icon {
 	height: 1.4em;
 }
 
+#episode-details .header .back .icon,
+#film-page .header .back .icon {
+  background: #35322b75;
+	padding: .2em;
+	border-radius: 8em;
+	width: 1.4em;
+	height: 1.4em;
+}
+
 #film-page .float-btn-play {
   border-radius: .8em;
   background: none;
